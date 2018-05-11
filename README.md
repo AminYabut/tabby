@@ -34,7 +34,7 @@ A step by step series of examples that tell you have to get the tablet up and ru
 
 ## Update Notes
 
-* I can't promise too much for updates but i will try to fix issues as they arise.
+I can't promise too much for updates but i will try to fix issues as they arise.
 
 * **V0.2 2018/01/17**
 
