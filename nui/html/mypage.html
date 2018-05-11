@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title> -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Teko:600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:200" rel="stylesheet">
+    <style>
+        ul {
+            font-family: 'Teko', sans-serif;
+        }
+    
+    
+        h1, h2, h3, h4, h5, p {
+            margin: 0;
+            font-family: 'Work Sans', sans-serif;
+        }
+    
+        body {
+            display: flex;
+            max-height: 100vh;
+            flex-direction: row;
+            overflow: hidden;
+            padding: 1em;
+            background: linear-gradient(to right, skyblue 0%, white 100%) no-repeat;
+            font-family: 'Barlow Semi Condensed', sans-serif;
+            height: 100vh;
+        }
+    
+        * { box-sizing: border-box; }
+    
+        aside {
+        /*   padding: 1em; */
+            background: deepskyblue;
+            overflow: auto;
+        }
+        .card {
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+        }
+        aside ul {
+            list-style: none;
+            margin: 0;
+            padding: 1em;
+    
+        }
+        a:link {
+            text-decoration: none;
+        }
+        a:visited {
+            text-decoration: none;
+        }
+        a:hover {
+            color: white;
+            text-shadow: 2px 3px 1px black;
+        }
+    
+        aside ul a {
+            text-decoration: none;
+            color: #333;
+            font-size: 1.25em;
+            text-shadow: 1px 1px 2px white;
+        }
+    
+        aside ul li:before {
+            content: attr(data-icon);
+            margin-right: 8px;
+            font-family: "Material Icons";
+            color: white;
+            text-shadow: 2px 2px 2px black;
+            font-size: 2em;
+        }
+    
+        main {
+            padding: 1.5em 2em;
+            background: ghostwhite;
+            flex: 1;
+            overflow: auto;
+        }
+    
+        .main-title {
+            margin-bottom: 0.5em;
+        }
+        .main-header {
+            max-width: 700px;
+        }
+        #main-flake {
+            float:right; 
+            position: absolute; 
+            bottom: 0; 
+            right: 0; 
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+    <aside class="card">
+        <ul>
+            <li data-icon="info">
+              <a href="nui://nui-tablet-pages/client/news.html">Updates & News</a>
+            </li>
+            <li data-icon="keyboard">
+              <a href="nui://nui-tablet-pages/client/hotties.html">Functions & Hotkeys</a>
+            </li>
+            <li data-icon="gavel">
+              <a href="nui://nui-tablet-pages/client/laws.html">Laws</a>
+            </li>
+            <li data-icon="gavel">
+                <a href="nui://nui-tablet-pages/client/rulesforassholes.html">Rules</a>
+            </li>
+            <li data-icon="business">
+              <a href="nui://nui-tablet-pages/client/jobsfordummies.html">Job Tutorials</a>
+            </li>
+        </ul>
+    </aside>
+    <main>
+        <h1 class="main-title">Welcome to Vancouver Island Roleplay</h1>
+        <p class="main-header">This is our special tablet that helps to explain everything to you about this roleplay server. Click an option in the sidebar to start. Hitting the home button on the tablet will take you back to the home screen which we are still working on apps for the tablet, hitting it again will close the tablet.</p>
+            <p>Here's a couple links to get you started, these must be opened out of game.</p>
+        <ul>
+          <li>Community Website: vancouverislandroleplay.ga</li>
+          <li>Discord Invite Code: z376H93</li>
+        </ul>
+        <div id="main-flake">❄️</div>
+    </main>
+</body>
+</html>

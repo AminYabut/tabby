@@ -1,0 +1,1735 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <style>
+    @import url(https://fonts.googleapis.com/css?family=Ruluko);
+    @import url(http://weloveiconfonts.com/api/?family=fontawesome);
+
+    [class*="fontawesome-"]:before {
+      font-family: 'FontAwesome', sans-serif;
+    }
+
+    * {
+      font-size: 100%;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+
+    html {
+      font-size: 100%;
+      height: 100%;
+      width: 100%;
+      box-sizing: border-box;
+      background: rgb(137, 193, 223);
+    }
+
+    body {
+      font-family: 'Ruluko', sans-serif;
+      font-size: 16px;
+      width: 100%;
+      margin: 0 auto;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+    }
+
+    body header {
+      top: 0;
+      margin: 0;
+      height: 4rem;
+      background: dodgerblue;
+      text-shadow: 0.5px 0.5px black;
+      box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.3);
+      -webkit-transition: all 0.7s ease;
+      transition: all 0.7s ease;
+      z-index: 1;
+    }
+
+    body header h1 {
+      margin-left: 1.5rem;
+      color: whitesmoke;
+      line-height: 1rem;
+    }
+
+    body header h1 span {
+      float: right;
+      margin-right: 2rem;
+      font-size: 3rem;
+      line-height: 2rem;
+      cursor: pointer;
+    }
+
+    body h2 {
+      font-size: 1.75em;
+    }
+
+    main {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+      align-items: stretch;
+    }
+
+    main .sidebar {
+      background: dodgerblue;
+      min-width: 180px;
+      max-width: 300px;
+      margin-bottom: 0;
+      color: whitesmoke;
+      text-shadow: 1px 1px #0d0d0d;
+      overflow: auto;
+      height: 600px;
+    }
+
+    main .sidebar h2 {
+      text-align: center;
+      margin: 0;
+      padding: 1.2rem;
+      background: #323233;
+      color: #A6A5A4;
+      border-bottom: 2px solid #2F2F2F;
+    }
+
+    main .sidebar h2:after {
+      content: "The SideBar";
+    }
+
+    main .sidebar ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+    }
+
+    main .sidebar li {
+      -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+      flex: 1 1 auto;
+      display: block;
+      margin: 0;
+      padding: 0;
+      border-bottom: 2px solid #2F2F2F;
+    }
+
+    main .sidebar li:hover {
+      border-right: .5rem solid #81A4D4;
+      box-shadow: 0 6px 4px -4px rgba(0, 0, 0, 0.4);
+    }
+
+    main .sidebar a {
+      color: whitesmoke;
+      display: block;
+      padding: 1.5em .2em;
+      text-decoration: none;
+      text-align: center;
+      font-size: 1.2em;
+      -webkit-transition: all 1s ease;
+      transition: all 1s ease;
+    }
+
+    main .sidebar a:before {
+      content: "SideBar";
+    }
+
+    main .sidebar a:hover {
+      color: #81A4D4;
+      margin-left: 1rem;
+    }
+
+    body>header {
+      height: 9rem;
+    }
+
+    body>header h1 {
+      line-height: 2rem;
+    }
+
+    body>header h1 span {
+      line-height: 8rem;
+    }
+
+    main {
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+    }
+
+    main .sidebar {
+      -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+      flex-grow: 1;
+    }
+
+    main .sidebar h2:after {
+      content: "The TopBar";
+      padding-left: .5rem;
+    }
+
+    main .sidebar ul li {
+      margin: 0;
+      list-style-type: none;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+    }
+
+    main .sidebar ul li:last-child {
+      border-bottom: none;
+    }
+
+    main li {
+      -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+      flex: 1 1 auto;
+      margin: 0;
+      padding: 0;
+    }
+
+    main .sidebar a:before {
+      content: "";
+    }
+
+    #all-content {
+      flex: 1;
+    }
+
+    .info {
+      background-color: #294860;
+      border-radius: 20px;
+      /* The border-radius gives rounded corners.*/
+      color: white;
+      padding: 10px;
+      margin: 10px auto;
+    }
+
+    h2 {
+      margin: 10px;
+    }
+
+    .info {
+      background-color: #DFEAF1;
+      padding: 4px;
+      margin: 10px;
+      border-radius: 4px;
+      color: black;
+    }
+
+    */ .info-title {
+      font-size: 3em;
+      margin: 8px;
+      text-align: center;
+      color: #294860;
+    }
+
+    .info-description {
+      font-weight: lighter;
+      /* this makes the font a bit less dark */
+      font-size: 1.3em;
+      margin: 6px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Criminal Code&nbsp;&nbsp;</h1>
+  </header>
+  <main>
+    <div class="sidebar">
+      <div class="TOC">
+        <h1>Table of Contents</h1>
+        <!-- Below this is a <ol> element. "ol" stands for "ordered list." -->
+        <ol>
+          <!-- <li> means "list item" -->
+          <li>
+            <a href="#info-1">PENAL CODE (1) -Crimes Against the Person (1)-01 to (1)-11)</a>
+            <!-- Next I add an "unordered list" within the "list item" of my "ordered list" -->
+            <ul>
+              <li>
+                <a href="#info-1-1">(1)01. Criminal Harassment(Intimidation)</a>
+              </li>
+              <li>
+                <a href="#info-1-2">(1)02. Simple Assault </a>
+              </li>
+              <li>
+                <a href="#info-1-3">(1)03. Assault with A Weapon</a>
+              </li>
+              <li>
+                <a href="#info-1-4">(1)04. Assaulting a Police Officer</a>
+              </li>
+              <li>
+                <a href="#info-1-5">(1)05. Aggravated Assault</a>
+              </li>
+              <li>
+                <a href="#info-1-6">(1)06. Attempted Murder</a>
+              </li>
+              <li>
+                <a href="#info-1-7">(1)07. Manslaughter</a>
+              </li>
+              <li>
+                <a href="#info-1-8">(1)08. Murder</a>
+              </li>
+              <li>
+                <a href="#info-1-9">(1)09. Kidnapping and Unlawful Confinement </a>
+              </li>
+              <li>
+                <a href="#info-1-10">(1)10. Torture</a>
+              </li>
+            </ul>
+          </li>
+          <li class="TOC-info">
+            <a href="#info-2">PENAL CODE (2)-Crimes Against Property and Criminal Profiteering (2)-01 to (2)-17)</a>
+            <ul>
+              <li>
+                <a href="#info-2-1">(2)01. Arson</a>
+              </li>
+              <li>
+                <a href="#info-2-2">(2)02. Trespassing</a>
+              </li>
+              <li>
+                <a href="#info-2-3">(2)04. Burglary</a>
+              </li>
+              <li>
+                <a href="#info-2-4">(2)05. Possession of break-in instrument</a>
+              </li>
+              <li>
+                <a href="#info-2-5">(2)06. Robbery</a>
+              </li>
+              <li>
+                <a href="#info-2-6">(2)09. Theft</a>
+              </li>
+              <li>
+                <a href="#info-2-7">(2)10. Theft Over $5000 </a>
+              </li>
+              <li>
+                <a href="#info-2-8">(2)14. Extortion</a>
+              </li>
+              <li>
+                <a href="#info-2-9">(2)15. Forgery</a>
+              </li>
+              <li>
+                <a href="#info-2-10">(2)16. Fraud</a>
+              </li>
+              <li>
+                <a href="#info-2-11">(2)17. Mischief</a>
+              </li>
+            </ul>
+          </li>
+          <li class="TOC-info">
+            <a href="#info-3">PENAL CODE (4)-Crimes Against Public Justice (4)-01 to (4)-23)</a>
+            <ul>
+              <li>
+                <a href="#info-3-1">(4)01. Bribery</a>
+              </li>
+              <li>
+                <a href="#info-3-2">(4)02. Failure to Pay a Fine</a>
+              </li>
+              <li>
+                <a href="#info-3-3">(4)03. Contempt of Court</a>
+              </li>
+              <li>
+                <a href="#info-3-4">(4)04. Subpoena Violation</a>
+              </li>
+              <li>
+                <a href="#info-3-5">(4)05. Obstructing Justice</a>
+              </li>
+              <li>
+                <a href="#info-3-6">(4)06. False Information to A Government Employee</a>
+              </li>
+              <li>
+                <a href="#info-3-7">(4)07. Filing A False Complaint </a>
+              </li>
+              <li>
+                <a href="#info-3-8">(4)08. Perjury</a>
+              </li>
+              <li>
+                <a href="#info-3-9">(4)09. Obstruction of a Peace Officer</a>
+              </li>
+              <li>
+                <a href="#info-3-10">(4)10. Impersonation of A Government Employee</a>
+              </li>
+              <li>
+                <a href="#info-3-11">(4)11. Obstruction of A Government Employee</a>
+              </li>
+              <li>
+                <a href="#info-3-12">(4)12. Resisting A Peace Officer </a>
+              </li>
+              <li>
+                <a href="#info-3-13">(4)13. Escape from Custody</a>
+              </li>
+              <li>
+                <a href="#info-3-14">(4)16. Human Trafficking</a>
+              </li>
+              <li>
+                <a href="#info-3-15">(4)18. Fabricating Evidence</a>
+              </li>
+              <li>
+                <a href="#info-3-16">(4)20. Breach of Undertaking, Recognizance, or Probation</a>
+              </li>
+              <li>
+                <a href="#info-3-17">(4)21. Voter Fraud / Voter Pandering</a>
+              </li>
+              <li>
+                <a href="#info-3-18">(4)22. Corruption of Public Duty</a>
+              </li>
+              <li>
+                <a href="#info-3-19">(4)23. Corruption of Public Office</a>
+              </li>
+
+            </ul>
+          </li>
+          <li class="TOC-info">
+            <a href="#info-4">PENAL CODE (5)-Crimes Against Public Peace (5)-01 to (5)-04)</a>
+            <ul>
+              <li>
+                <a href="#info-4-1">(5)01. Disturbing the Peace </a>
+              </li>
+              <li>
+                <a href="#info-4-2">(5)02. Unlawful Assembly and Rioting</a>
+              </li>
+              <li>
+                <a href="#info-4-3">(5)04. Hate Crimes </a>
+              </li>
+            </ul>
+          </li>
+          <li class="TOC-info">
+            <a href="#info-5">PENAL CODE (6)-Crimes Against Public Health and Safety (6)01 to (6)-11)</a>
+            <ul>
+              <li>
+                <a href="#info-5-1">(6)01. Possession of A Controlled Substance </a>
+              </li>
+              <li>
+                <a href="#info-5-2">(6)07. Possession of An Open Container Liquor</a>
+              </li>
+              <li>
+                <a href="#info-5-2">(6)11. Terrorism</a>
+              </li>
+            </ul>
+          </li>
+          <li class="TOC-info">
+            <a href="#info-6">PENAL CODE (8)-Vehicular Offenses (8)-01 to (8)-10)</a>
+            <ul>
+              <li>
+                <a href="#info-6-1">(8)01. Driving with A Suspended License</a>
+              </li>
+              <li>
+                <a href="#info-6-2">(8)02. Flight from a Peace Officer</a>
+              </li>
+              <li>
+                <a href="#info-6-3">(8)03. Flying Without a Pilot's License</a>
+              </li>
+              <li>
+                <a href="#info-6-4">(8)04. Failure to Stop or Remain at Scene of Accident</a>
+              </li>
+              <li>
+                <a href="#info-6-5">(8)05. Reckless Operation of An Aircraft</a>
+              </li>
+              <li>
+                <a href="#info-6-6">(8)08. Failure to Adhere to Flight Protocols</a>
+              </li>
+              <li>
+                <a href="#info-6-7">(8)09. Aerial Evasion</a>
+              </li>
+              <li>
+                <a href="#info-6-8">(8)10. Restricted Airspace Violation</a>
+              </li>
+            </ul>
+          </li>
+          <li class="TOC-info">
+            <a href="#info-7">PENAL CODE(9)-Control Of Deadly Weapons And Equipment (9)-01 to (9)-13)</a>
+            <ul>
+              <li>
+                <a href="#info-7-1">(9)01. Possession of An Illegal Blade</a>
+              </li>
+              <li>
+                <a href="#info-7-2">(9)02. Possession of An Unlicensed Firearm</a>
+              </li>
+              <li>
+                <a href="#info-7-3">(9)02. Possession of An Illegal Firearm</a>
+              </li>
+              <li>
+                <a href="#info-7-4">(9)04. Possession of An Assault Weapon</a>
+              </li>
+              <li>
+                <a href="#info-7-5">(9)05. Unlicensed Sale of a Firearm</a>
+              </li>
+              <li>
+                <a href="#info-7-6">(9)06. Possession of An Explosive Device</a>
+              </li>
+              <li>
+                <a href="#info-7-7">(9)07. Manufacture or Possession of an Improvised Device</a>
+              </li>
+              <li>
+                <a href="#info-7-8">(9)08. Possession of Weaponry with Intent to Sell</a>
+              </li>
+              <li>
+                <a href="#info-7-9">(9)09. Possession of Explosive Devices with Intent to Sell</a>
+              </li>
+              <li>
+                <a href="#info-7-10">(9)10. Brandishing A Firearm </a>
+              </li>
+              <li>
+                <a href="#info-7-11">(9)11. Weapons Discharge Violation</a>
+              </li>
+              <li>
+                <a href="#info-7-12">(9)12. Drive-By Shooting </a>
+              </li>
+              <li>
+                <a href="#info-7-13">(9)13. CCW / PF Violation </a>
+              </li>
+            </ul>
+          </li>
+          <li class="TOC-info">
+            <a href="#info-8">PENAL CODE (11)-Road Law (11)-01 to (11)-21)</a>
+            <ul>
+              <li>
+                <a href="#info-8-1">(11)05. Careless Driving </a>
+              </li>
+              <li>
+                <a href="#info-8-2">(11)06. Dangerous Operation of a Motor Vehicle</a>
+              </li>
+              <li>
+                <a href="#info-8-3">(11)10. Impaired Driving, Over 80 and Refusal</a>
+              </li>
+              <li>
+                <a href="#info-8-4">(11)11. Registration Violation</a>
+              </li>
+              <li>
+                <a href="#info-8-5">(11)13. Street Racing </a>
+              </li>
+              <li>
+                <a href="#info-8-6">(11)14. Driving While Disqualified (Driving without a Valid License)</a>
+              </li>
+              <li>
+                <a href="#info-8-7">(11)19. No vehicle insurance</a>
+              </li>
+            </ul>
+          </li>
+          <li class="TOC-info">
+            <a href="#info-3">PENAL CODE (13)-Federal Code Violations (13)-01 to (13)-12)</a>
+            <ul>
+              <li>
+                <a href="#info-3-1">(13)01. Racketeering</a>
+              </li>
+              <li>
+                <a href="#info-3-2">(13)02. Tax Evasion</a>
+              </li>
+              <li>
+                <a href="#info-3-2">(13)03. Laundering of Money Instruments</a>
+              </li>
+              <li>
+                <a href="#info-3-2">(13)04. Gambling License Violation</a>
+              </li>
+              <li>
+                <a href="#info-3-2">(13)05. Medical Practice Violation</a>
+              </li>
+              <li>
+                <a href="#info-3-2">(13)06. Legal Practice Violation</a>
+              </li>
+              <li>
+                <a href="#info-3-2">(13)07. Construction and Maintenance Code Violation</a>
+              </li>
+              <li>
+                <a href="#info-3-2">(13)08. Criminal Fire Code Violation</a>
+              </li>
+              <li>
+                <a href="#info-3-2">(13)09. Failure to Comply with Fire Code</a>
+              </li>
+              <li>
+                <a href="#info-3-2">(13)10. Wiretapping Violation</a>
+              </li>
+              <li>
+                <a href="#info-3-2">(13)11. Criminal Business Operation</a>
+              </li>
+              <li>
+                <a href="#info-3-2">(13)12. Corporate Hijacking</a>
+              </li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+    </div>
+    <div id="all-content">
+      <h1>LA Criminal Code</h1>
+      <p>
+        The justice system works as follows: If you are caught committing a crime or driving violation you have the option to pay
+        the fine issued or serve the sentence issued right away. The sentence will be decided by the arresting officer based
+        on the Criminal Code, situation and the offenders previous record. The accused has the option to fight the case by
+        a jury of their peers providing they have somewhat of a case. If the case is lost the accused will be sentenced to
+        double the time of the original sentence. This applies for criminal and driving offences. If you chose this route
+        you will be placed on bail providing you have the correct amount of money for bail. While on bail you may be subject
+        to conditions for your release (if your crime was driving related maybe you'll be banned from driving till your trial
+        date, if it booze related maybe you can't drink, curfew, etc.) In order for fair trial there must be six people willing
+        to sit and hear the case and evidence provided by the defendant and the officer on the case. The peers will make
+        their judgement and a judge will make the finally call on the sentence. If the peers feel you're not guilty then
+        your free to go. You are free to hire a lawyer at any point. If you accept the sentence at the time of arrest you
+        may pay your fine on the spot or serve your jail time in the police station closest to you providing you've been
+        charged with an offence that doesn't require prison. If prison time is required you time is to be spent in the boiling
+        broke pen and your sentence time start after your admitted. Any sentence issued in the court will be served in the
+        prison as well. Jail break outs are permitted as long as there are minimum two guards on duty watching the jail/prison
+        in question. No road break outs are permitted. By failing roleplay by any order made by police or judge and not following
+        roleplay you will be banned.
+
+      </p>
+      <div class="info">
+        <h2 id="info-1">PENAL CODE (1) -Crimes Against the Person (1)-01 to (1)-11)</h2>
+        <div class="info" id="info-1-1">
+          <div class="info-title">
+            (1)01. Criminal Harassment(Intimidation)
+          </div>
+          <div class="info-description">
+            <p>
+
+              A stalker's efforts to control and intimidate often escalate into violence.” LA law makes criminal harassment
+              an offence punishable by summary conviction or by indictment. This offence currently carries a maximum penalty
+              of 10 minutes in prison. Punishment Min $500 Fine to Max 10 Minutes in Jail/Prison Bail would be set in between
+              $1000 to $10 000
+
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="info" id="info-1-2">
+        <div class="info-title">
+          (1)02. Simple Assault
+        </div>
+        <div class="info-description">
+          <p>
+            This is the most basic type of assault charge in US, and, at this level, can be prosecuted in two ways. If someone is
+            charged with simple assault as a summary conviction, this is the less severe of the two charges, and can actually
+            be processed directly by a judge with no need for a jury or a jail sentence. Punishment Min $500 Fine to $2000
+            Fine
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-1-3">
+        <div class="info-title">
+          (1)03. Assault with A Weapon
+        </div>
+        <div class="info-description">
+          <p>
+            Assault with a weapon is exactly what it sounds like. This is an act of violence or a threat of violence in which a weapon
+            is used, such as a gun, knife, or another implement. Like the bodily harm charge, this can also be prosecuted
+            as either a summary conviction or indictable offense with similar maximum jail sentences. Punishment Min $1000
+            Fine to 5 mins in Jail Bail would be at $1000
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-1-4">
+        <div class="info-title">
+          (1) 04. Assaulting a Police Officer
+        </div>
+        <div class="info-description">
+          <p>
+            When acts of violence occur to a police officer, this has its own charge, but is prosecuted in a similar manner to other
+            charges. Depending on circumstances, a police officer assault charge can be a summary conviction, or it can be
+            an indictable offense. It depends on the act. Punishment Min $1000 fine to 5 mins Jail Bail would be set between
+            $1000 to $10 000
+
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-1-5">
+        <div class="info-title">
+          (1)05. Aggravated Assault
+        </div>
+        <div class="info-description">
+          <p>
+            This is a more serious type of assault, usually resulting in serious, potentially life-long crippling injuries, or a real
+            danger of death for the victim. Aggravated assault is always treated as an indictable offense, with a maximum
+            sentence of 20 mins in prison. Punishment Min 5 Minutes to 20 Minutes per count To be served in prison Bail would
+            be set between $5000 to $15 000
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-1-6">
+        <div class="info-title">
+          (1)06. Attempted Murder
+        </div>
+        <div class="info-description">
+          <p>
+            A dangerous offender is sentenced for an indeterminate period of imprisonment and is eligible for parole after serving a
+            minimum of 7 minutes. Punishment Min 7 minutes Prison time to max of 25minutes. Bail would be set between $50
+            000 to $100 000 Bail for this charge is depending if the officers feel you can be released and come back for
+            court. You can have a lawyer help you if you wish.
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-1-7">
+        <div class="info-title">
+          (1)07. Manslaughter
+        </div>
+        <div class="info-description">
+          <p>
+            Any "culpable homicide" that does not meet the definition of murder is said to be manslaughter. Culpable homicide is defined
+            to include when a person causes the death of another human being by: (a) by means of an unlawful act; (b) by
+            criminal negligence; (c) by causing that human being, by threats or fear of violence or by deception, to do anything
+            that causes his death; or (d) by willfully frightening that human being, in the case of a child or sick person.
+            Manslaughter is reserved for killings where the level of intent is less than murder. Practically speaking, manslaughter
+            is when someone is doing something wrong and someone else ends up dead as a result of it -and- the offender did
+            not intend to kill or cause significant bodily harm that he knew may result in death. Eligible for parole after
+            5 minutes Prison Punishment Min 7 minutes Prison time to max of 25minutes. Bail would be set between $50 000
+            to $100 000 Bail for this charge is depending if the officers feel you can be released and come back for court.
+            You can have a lawyer help you if you wish.
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-1-8">
+        <div class="info-title">
+          (1)08. Murder
+        </div>
+        <div class="info-description">
+          <p>
+            A dangerous offender is sentenced for an indeterminate period of imprisonment and is eligible for parole after serving a
+            minimum of 7 years. An offender convicted of 1st or 2nd degree murder is ineligible to be declared a dangerous
+            offender for that same homicide (since a mandatory life sentence already applies). Punishment Min 25 minutes
+            Prison time to max of 60 minutes per count. Bail would be set between $250 000 to $1 000 000 Bail for this charge
+            is depending if the officers feel you can be released and come back for court. You can have a lawyer help you
+            if you wish.
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-1-9">
+        <div class="info-title">
+          (1)09. Kidnapping and Unlawful Confinement
+        </div>
+        <div class="info-description">
+          <p>
+            (1) Every person commits an offence who kidnaps a person with intent (a) to cause the person to be confined or imprisoned
+            against the person’s will; (b) to cause the person to be unlawfully sent or transported out of US against
+            the person’s will; or (c) to hold the person for ransom or to service against the person’s will. Forcible confinement
+            (2) Everyone who, without lawful authority, confines, imprisons or forcibly seizes another person is guilty of
+            (a) an indictable offence and liable to imprisonment for a term not exceeding ten years; or (b) an offence punishable
+            on summary conviction and liable to imprisonment for a term not exceeding eighteen months. Non-resistance (3)
+            In proceedings under this section, the fact that the person in relation to whom the offence is alleged to have
+            been committed did not resist is not a defense unless the accused proves that the failure to resist was not caused
+            by threats, duress, force or exhibition of force. Punishment Min 10 minutes Prison time to max of 25minutes.
+            Bail would be set between $50 000 to $100 000 Bail for this charge is depending if the officers feel you can
+            be released and come back for court. You can have a lawyer help you if you wish.
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-1-10">
+        <div class="info-title">
+          (1)10. Torture
+        </div>
+        <div class="info-description">
+          <p>
+            Every official, or every person acting at the instigation of or with the consent or acquiescence of an official, who inflicts
+            torture on any other person is guilty of an indictable offence and liable to imprisonment for a term not exceeding
+            fourteen minutes. Punishment Min 5 minutes Prison time to max of 14 minutes. Bail would be set between $50 000
+            to $100 000 Bail for this charge is depending if the officers feel you can be released and come back for court.
+            You can have a lawyer help you if you wish.
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-2-1">
+        <h2 id="info-2">PENAL CODE (2)-Crimes Against Property and Criminal Profiteering (2)-01 to (2)-17)</h2>
+        <div class="info-title">
+          (2)01. Arson
+        </div>
+        <div class="info-description">
+          <p>
+            Every person who intentionally or recklessly causes damage by fire or explosion to property that is not wholly owned by that
+            person is guilty of an indictable offence and liable to imprisonment for a term not exceeding fourteen years.
+            Punishment Min $500 fine to max of 14 minutes Prison time. Bail would be set between $1 000 to $10 000
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-2-2">
+        <div class="info-title">(2)02. Trespassing</div>
+        <div class="info-description">
+          <p>
+            Everyone who, without lawful excuse, the proof of which lies on him, loiters or prowls at night on the property of another
+            person near a dwelling-house situated on that property is guilty of an offence punishable on summary conviction.
+            Punishment Warning to $1000 fine.
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-2-3">
+        <div class="info-title">(2)04. Burglary</div>
+        <div class="info-description">
+          <p>
+            The Criminal Code establishes offences for activities related to burglary. Anyone who, without lawful excuse, entered or
+            was in a dwelling house with intent to commit an indictable offence, is guilty of an indictable offence with
+            a maximum sentence of 10 years' imprisonment. Punishment Min $2500 fine to max of 10 minutes Prison. Bail would
+            be set between $5 000 to $20 000 Bail for this charge is depending if the officers feel you can be released and
+            come back for court. You can have a lawyer help you if you wish.
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-2-5">
+        <div class="info-title">(2)05. Possession of break-in instrument</div>
+        <div class="info-description">
+          <p>
+            (1) Everyone who, without lawful excuse, the proof of which lies on them, has in their possession any instrument suitable
+            for the purpose of breaking into any place, motor vehicle, vault or safe under circumstances that give rise to
+            a reasonable inference that the instrument has been used or is or was intended to be used for such a purpose,
+            (a) is guilty of an indictable offence and liable to imprisonment for a term not exceeding ten minutes; or (b)
+            is guilty of an offence punishable on summary conviction. Punishment Min 4 minutes jail time to max of 15minutes
+            prison. Bail would be set between $5 000 to $10 000
+
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-2-6">
+        <div class="info-title">(2)06. Robbery</div>
+        <div class="info-description">
+          <p>
+            Every one commits robbery who (a) steals, and for the purpose of extorting whatever is stolen or to prevent or overcome resistance
+            to the stealing, uses violence or threats of violence to a person or property; (b) steals from any person and,
+            at the time he steals or immediately before or immediately thereafter, wounds, beats, strikes or uses any personal
+            violence to that person; (c) assaults any person with intent to steal from him; or (d) steals from any person
+            while armed with an offensive weapon or imitation thereof. Punishment Min 2 minutes jail time to max of 15 minutes
+            prison. Bail would be set between $5 000 to $100 000 Bail for this charge is depending if the officers feel you
+            can be released and come back for court. You can have a lawyer help you if you wish.
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-2-7">
+        <div class="info-title">(2)09. Theft</div>
+        <div class="info-description">
+          <p>
+            Where an accused is charged with possession of any property obtained by the commission of an offence, evidence of the conviction
+            or discharge of another person of theft of the property is admissible against the accused, and in the absence
+            of evidence to the contrary is proof that the property was stolen. Punishment Min $500 fine to $10 000. Must
+            pay for whatever was stolen in addition to fine.
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-2-8">
+        <div class="info-title">(2)10. Theft Over $5000 </div>
+        <div class="info-description">
+          <p>
+            Where an accused is charged with possession of any property obtained by the commission of an offence, evidence of the conviction
+            or discharge of another person of theft of the property is admissible against the accused, and in the absence
+            of evidence to the contrary is proof that the property was stolen. This includes motors vehicles. Punishment
+            Min 3 minutes jail time to max of 15 minutes Prison. Bail would be set between $5 000 to $15 000
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-2-9">
+        <div class="info-title">(2)14. Extortion</div>
+        <div class="info-description">
+          <p>
+            Every person who commits extortion is guilty of an indictable offence and liable (a) if a restricted firearm or prohibited
+            firearm is used in the commission of the offence or if any firearm is used in the commission of the offence and
+            the offence is committed for the benefit of, at the direction of, or in association with, a criminal organization,
+            to imprisonment for life and to a minimum punishment of imprisonment for a term of (i) in the case of a first
+            offence, five minutes, and (ii) in the case of a second or subsequent offence, seven minutes; (a.1) in any other
+            case where a firearm is used in the commission of the offence, to imprisonment for life and to a minimum punishment
+            of imprisonment for a term of four years; and (b) in any other case, to imprisonment for life. Punishment Min
+            5 minutes Prison time to max of 60 minutes. Bail would be set between $5 000 to $100 000 Bail for this charge
+            is depending if the officers feel you can be released and come back for court. You can have a lawyer help you
+            if you wish.
+
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-2-10">
+        <div class="info-title">(2)15. Forgery</div>
+        <div class="info-description">
+          <p>
+            Every one commits forgery who makes a false document, knowing it to be false, with intent (a) that it should in any way be
+            used or acted on as genuine, to the prejudice of any one whether within US or not; or (b) that a person should
+            be induced, by the belief that it is genuine, to do or to refrain from doing anything, whether within US
+            or not. Making false document (2) Making a false document includes (a) altering a genuine document in any material
+            part; (b) making a material addition to a genuine document or adding to it a false date, attestation, seal or
+            other thing that is material; or (c) making a material alteration in a genuine document by erasure, obliteration,
+            removal or in any other way. When forgery complete (3) Forgery is complete as soon as a document is made with
+            the knowledge and intent referred to in subsection (1), notwithstanding that the person who makes it does not
+            intend that any particular person should use or act on it as genuine or be induced, by the belief that it is
+            genuine, to do or refrain from doing anything. Forgery complete though document incomplete (4) Forgery is complete
+            notwithstanding that the false document is incomplete or does not purport to be a document that is binding in
+            law, if it is such as to indicate that it was intended to be acted on as genuine. Exception (5) No person commits
+            forgery by reason only that the person, in good faith, makes a false document at the request of a police force,
+            the Canadian Forces or a department or agency of the federal government or of a provincial government. Punishment
+            Min 1 minutes Prison time to max of 10 minutes. Bail would be set between $5 000 to $10 000
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-2-11">
+        <div class="info-title">(2)16. Fraud</div>
+        <div class="info-description">
+          <p>
+            Everyone who, by deceit, falsehood or other fraudulent means, whether or not it is a false pretense within the meaning of
+            this Act, defrauds the public or any person, whether ascertained or not, of any property, money or valuable security
+            or any service, (a) is guilty of an indictable offence and liable to a term of imprisonment not exceeding fourteen
+            years, where the subject-matter of the offence is a testamentary instrument or the value of the subject-matter
+            of the offence exceeds five thousand dollars. Punishment Min 2 minutes jail time to max of 10 minutes prison.
+            Bail would be set between $5 000 to $50 000 Bail for this charge is depending if the officers feel you can be
+            released and come back for court. You can have a lawyer help you if you wish.
+
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-2-12">
+        <div class="info-title">(2)17. Mischief</div>
+        <div class="info-description">
+          <p>
+            (1) Every one commits mischief who willfully (a) destroys or damages property; (b) renders property dangerous, useless, inoperative
+            or ineffective; (c) obstructs, interrupts or interferes with the lawful use, enjoyment or operation of property;
+            or (d) obstructs, interrupts or interferes with any person in the lawful use, enjoyment or operation of property.
+            2) Everyone who commits mischief that causes actual danger to life is guilty of an indictable offence and liable
+            to imprisonment for life. Punishment Min $500 fine to max of 7 minutes prison time. Bail would be set between
+            $1 000 to $10 000 Damaged property will need to be paid for as well as fine.
+
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-3-1">
+        <h2 id="info-3">PENAL CODE (4)-Crimes Against Public Justice (4)-01 to (4)-23)</h2>
+        <div class="info-title">(4)01. Bribery</div>
+        <div class="info-description">
+          <p>
+            Bribery of judicial officers, etc. (1) Everyone is guilty of an indictable offence and liable to imprisonment for a term
+            not exceeding fourteen years who (a) being the holder of a judicial office, or being a member of Parliament or
+            of the legislature of a province, directly or indirectly, corruptly accepts, obtains, agrees to accept or attempts
+            to obtain, for themselves or another person, any money, valuable consideration, office, place or employment in
+            respect of anything done or omitted or to be done or omitted by them in their official capacity, or (b) directly
+            or indirectly, corruptly gives or offers to a person mentioned in paragraph (a), or to anyone for the benefit
+            of that person, any money, valuable consideration, office, place or employment in respect of anything done or
+            omitted or to be done or omitted by that person in their official capacity. Consent of Attorney General (2) No
+            proceedings against a person who holds a judicial office shall be instituted under this section without the consent
+            in writing of the Attorney General of US. Bribery of officers (3) Everyone is guilty of an indictable offence
+            and liable to imprisonment for a term not exceeding fourteen minutes who (a) being a justice, police commissioner,
+            peace officer, public officer or officer of a juvenile court, or being employed in the administration of criminal
+            law, directly or indirectly, corruptly accepts, obtains, agrees to accept or attempts to obtain, for themselves
+            or another person, any money, valuable consideration, office, place or employment with intent (i) to interfere
+            with the administration of justice, (ii) to procure or facilitate the commission of an offence, or (iii) to protect
+            from detection or punishment a person who has committed or who intends to commit an offence; or (b) directly
+            or indirectly, corruptly gives or offers to a person mentioned in paragraph (a), or to anyone for the benefit
+            of that person, any money, valuable consideration, office, place or employment with intent that the person should
+            do anything mentioned in subparagraph (a)(i), (ii) or (iii). Punishment Min $5000 fine to max of 14 minutes prison.
+            Bail would be set between $5 000 to $100 000 Bail for this charge is depending if the officers feel you can be
+            released and come back for court. You can have a lawyer help you if you wish.
+
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-3-2">
+        <div class="info-title">(4)02. Failure to Pay a Fine</div>
+        <div class="info-description">
+          <p>
+            Failure to pay fines issued by the police or courts will result in a temp ban by the admin
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-3-3">
+        <div class="info-title">(4)03. Contempt of Court</div>
+        <div class="info-description">
+          <p>
+            (1) A person who, being required by law to attend or remain in attendance for the purpose of giving evidence, fails, without
+            lawful excuse, to attend or remain in attendance accordingly is guilty of contempt of court. Punishment (2) A
+            court, judge, justice, provincial court judge or police officer may deal summarily with a person who is guilty
+            of contempt of court under this section and that person is liable to a fine not exceeding one hundred dollars
+            or to imprisonment for a term not exceeding 2 minutes or to both, and may be ordered to pay the costs that are
+            incident to the service of any process under this Part and to his detention, if any
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-3-4">
+        <div class="info-title">(4)04. Subpoena Violation</div>
+        <div class="info-description">
+          <p>
+            (see contempt)
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-3-5">
+        <div class="info-title">(4)05. Obstructing Justice</div>
+        <div class="info-description">
+          <p>
+            (1) Everyone who willfully attempts in any manner to obstruct, pervert or defeat the course of justice in a judicial proceeding,
+            (a) by indemnifying or agreeing to indemnify a surety, in any way and either in whole or in part, or (b) where
+            he is a surety, by accepting or agreeing to accept a fee or any form of indemnity whether in whole or in part
+            from or in respect of a person who is released or is to be released from custody, is guilty of (c) an indictable
+            offence and is liable to imprisonment for a term not exceeding two minutes
+
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-3-6">
+        <div class="info-title">
+          (4)06. False Information to A Government Employee
+        </div>
+        <div class="info-description">
+          <p>
+            (see fraud)
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-3-7">
+        <div class="info-title">
+          (4)07. Filing A False Complaint
+        </div>
+        <div class="info-description">
+          <p>
+            (see Perjury)
+
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-3-8">
+        <div class="info-title">(4)08. Perjury</div>
+        <div class="info-description">
+          <p>
+            (1) Subject to subsection (3), every one commits perjury who, with intent to mislead, makes before a person who is authorized
+            by law to permit it to be made before him a false statement under oath or solemn affirmation, by affidavit, solemn
+            declaration or deposition or orally, knowing that the statement is false. Punishment Min 2 minutes jail time
+            to max of 15 minutes prison time. Bail would be set between $5 000 to $100 000 Bail for this charge is depending
+            if the officers feel you can be released and come back for court. You can have a lawyer help you if you wish.
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-3-9">
+        <div class="info-title">(4)09. Obstruction of a Peace Officer</div>
+        <div class="info-description">
+          <p>
+            Everyone who (a) resists or willfully obstructs a public officer or peace officer in the execution of his duty or any person
+            lawfully acting in aid of such an officer, (b) omits, without reasonable excuse, to assist a public officer or
+            peace officer in the execution of his duty in arresting a person or in preserving the peace, after having reasonable
+            notice that he is required to do so, or (c) resists or willfully obstructs any person in the lawful execution
+            of a process against lands or goods or in making a lawful distress or seizure, is guilty of (d) an indictable
+            offence and is liable to imprisonment for a term not exceeding two minutes with a minimum sentence of $500 fine.
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-3-10">
+        <div class="info-title">(4)10. Impersonation of A Government Employee</div>
+        <div class="info-description">
+          <p>
+            To be added.
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-3-11">
+        <div class="info-title">
+          (4)11. Obstruction of A Government Employee
+        </div>
+        <div class="info-description">
+          <p>
+            To be added.
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-3-12">
+        <div class="info-title">(4)12. Resisting A Peace Officer</div>
+        <div class="info-description">
+          <p>
+            (a) resists or willfully obstructs a public officer or peace officer in the execution of his duty or any person lawfully
+            acting in aid of such an officer, (b) omits, without reasonable excuse, to assist a public officer or peace officer
+            in the execution of his duty in arresting a person or in preserving the peace, after having reasonable notice
+            that he is required to do so, or (c) resists or willfully obstructs any person in the lawful execution of a process
+            against lands or goods or in making a lawful distress or seizure, is guilty of (d) an indictable offence and
+            is liable to imprisonment for a term not exceeding two years, or (e) a fine starting at $500.
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-3-13">
+        <div class="info-title">
+          (4)13. Escape from Custody
+        </div>
+        <div class="info-description">
+          <p>
+            (1) Everyone who (a) escapes from lawful custody, or (b) is, before the expiration of a term of imprisonment to which he
+            was sentenced, at large in or out of US without lawful excuse, the proof of which lies on him, or (c)assists
+            anyone in escaping, is guilty of the offence and liable to imprisonment for a term not exceeding 5 minutes.
+
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-3-14">
+        <div class="info-title">
+          (4)16. Human Trafficking
+        </div>
+        <div class="info-description">
+          <p>
+            To be added
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-3-15">
+        <div class="info-title">
+          (4)18. Fabricating Evidence
+        </div>
+        <div class="info-description">
+          <p>
+            Everyone who, with intent to mislead, fabricates anything with intent that it shall be used as evidence in a judicial proceeding,
+            existing or proposed, by any means other than perjury or incitement to perjury is guilty of an indictable offence
+            and liable to imprisonment for a term not exceeding fourteen minutes. Punishment Min 5 minutes Prison time to
+            max of 14 minutes. Bail would be set between $5 000 to $50 000 Bail for this charge is depending if the officers
+            feel you can be released and come back for court. You can have a lawyer help you if you wish.
+
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-3-16">
+        <div class="info-title">
+          (4)20. Breach of Undertaking, Recognizance, or Probation
+        </div>
+        <div class="info-description">
+          <p>
+            Failure to comply with condition of undertaking or recognizance (3) Every person who is at large on an undertaking or recognizance
+            given to or entered into before a justice or judge and is bound to comply with a condition of that undertaking
+            or recognizance, and who fails, without lawful excuse, the proof of which lies on them, to comply with the condition,
+            direction or order is guilty of (a) an indictable offence and is liable to imprisonment for a term not exceeding
+            two minutes; or (b) is guilty of an offence punishable by fine starting at $100. Failure to comply with conditions
+            of undertaking (5.1) Every person who, without lawful excuse, the proof of which lies on the person, fails to
+            comply with any condition of an undertaking entered into pursuant to subsection 499(2) or 503(2.1) (a) is guilty
+            of an indictable offence and is liable to imprisonment for a term not exceeding two minutes; and/or (b) is guilty
+            of an offence punishable by fine starting at $100. 733.1 (1) An offender who is bound by a probation order and
+            who, without reasonable excuse, fails or refuses to comply with that order is guilty of (a) an indictable offence
+            and is liable to imprisonment for a term not exceeding two minutes; or (b) an offence punishable on summary conviction
+            and is liable to imprisonment for a term not exceeding 2 minutes, or to a fine not exceeding two thousand dollars,
+            or both.
+
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-3-17">
+        <div class="info-title">
+          (4)21. Voter Fraud / Voter Pandering
+        </div>
+        <div class="info-description">
+          <p>
+            To be added.
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-3-18">
+        <div class="info-title">
+          (4)22. Corruption of Public Duty
+        </div>
+        <div class="info-description">
+          <p>
+            To be added.
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-3-19">
+        <div class="info-title">
+          (4)23. Corruption of Public Office
+        </div>
+        <div class="info-description">
+          <p>
+            To be added
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-4-1">
+        <h2 id="info-4">PENAL CODE (5)-Crimes Against Public Peace (5)-01 to (5)-04) </h2>
+        <div class="info-title">
+          (5)01. Disturbing the Peace
+        </div>
+        <div class="info-description">
+          <p>
+            Disturbing the Peace. Disturbing the peace, also known as breach of the peace, is a criminal offense that occurs when a person
+            engages in some form of disorderly conduct, such as fighting or causing excessively loud noise. Min. Warning
+            to $5000 fine
+
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-4-2">
+        <div class="info-title">
+          (5)02. Unlawful Assembly and Rioting
+        </div>
+        <div class="info-description">
+          <p>
+            Unlawful assembly (1) An unlawful assembly is an assembly of three or more persons who, with intent to carry out any common
+            purpose, assemble in such a manner or so conduct themselves when they are assembled as to cause persons in the
+            neighborhood of the assembly to fear, on reasonable grounds, that they (a) will disturb the peace tumultuously;
+            or (b) will by that assembly needlessly and without reasonable cause provoke other persons to disturb the peace
+            tumultuously. Lawful assembly becoming unlawful (2) Persons who are lawfully assembled may become an unlawful
+            assembly if they conduct themselves with a common purpose in a manner that would have made the assembly unlawful
+            if they had assembled in that manner for that purpose. Exception (3) Persons are not unlawfully assembled by
+            reason only that they are assembled to protect the dwelling-house of any one of them against persons who are
+            threatening to break and enter it for the purpose of committing an indictable offence therein. Riot A riot is
+            an unlawful assembly that has begun to disturb the peace tumultuously. Punishment of rioter Everyone who takes
+            part in a riot is guilty of an indictable offence and liable to imprisonment for a term not exceeding two minutes.
+            Punishment for unlawful assembly Everyone who is a member of an unlawful assembly is guilty of an offence punishable
+            by fine starting at $50
+
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-4-3">
+        <div class="info-title">
+          (5)04. Hate Crimes
+        </div>
+        <div class="info-description">
+          <p>
+            Public incitement of hatred (1) Everyone who, by communicating statements in any public place, incites hatred against any
+            identifiable group where such incitement is likely to lead to a breach of the peace is guilty of (a) an indictable
+            offence and is liable to ban for a term not exceeding 12 hours. Willful promotion of hatred (2) Everyone who,
+            by communicating statements, other than in private conversation, willfully promotes hatred against any identifiable
+            group is guilty of (a) an indictable offence and is liable to ban for a term not exceeding 24 hours. Defenses
+            (3) No person shall be convicted of an offence under subsection (2) (a) if he establishes that the statements
+            communicated were true; (b) if, in good faith, the person expressed or attempted to establish by an argument
+            an opinion on a religious subject or an opinion based on a belief in a religious text; (c) if the statements
+            were relevant to any subject of public interest, the discussion of which was for the public benefit, and if on
+            reasonable grounds he believed them to be true; or (d) if, in good faith, he intended to point out, for the purpose
+            of removal, matters producing or tending to produce feelings of hatred toward an identifiable group in US.
+            Forfeiture (4) Where a person is convicted of an offence under subsection (1) or (2) of this section, anything
+            by means of or in relation to which the offence was committed, on such conviction, may, in addition to any other
+            punishment imposed, be ordered by the presiding provincial court judge or judge to be forfeited to Her Majesty
+            in right of the province in which that person is convicted, for disposal as the Attorney General may direct.
+
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-5-1">
+        <h2 id="info-5">PENAL CODE (6)-Crimes Against Public Health and Safety (6)01 to (6)-11)</h2>
+        <div class="info-title">
+          (6)01. Possession of A Controlled Substance
+        </div>
+        <div class="info-description">
+          <p>
+            Possession, sale, etc., for use in production of or trafficking in substance (1) No person shall possess, produce, sell,
+            import or transport anything intending that it will be used (a) to produce a controlled substance, unless the
+            production of the controlled substance is lawfully authorized; or (b) to traffic in a controlled substance. Punishment
+            (2) Every person who contravenes subsection (1) (a) if the subject matter of the offence is a substance included
+            in Schedule I, II, III or V, (i) is guilty of an offence and liable to imprisonment for a term of not more than
+            10 minutes, or (ii) is guilty of a small offence punishable and liable to imprisonment for a term of not more
+            than 3 mins; and (b) if the subject matter of the offence is a substance included in Schedule IV, (i) is guilty
+            of an indictable offence and liable to imprisonment for a term of not more than four minutes, or (ii) is guilty
+            of an offence punishable on summary conviction and liable to imprisonment for a term of not more than one minutes.
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-5-2">
+        <div class="info-title">
+          (6)07. Possession of An Open Container Liquor
+        </div>
+        <div class="info-description">
+          <p>
+            Fine starting at $50 not exceeding $500 (6)08. Public Intoxication FINE Fine starting at $65 not exceeding $500 (6)09. Under
+            the Influence of A Controlled Substance FINE Fine starting at $125 not exceeding $500
+
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-5-3">
+        <div class="info-title">
+          (6)11. Terrorism
+        </div>
+        <div class="info-description">
+          <p>
+            BANNED
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-5-">
+        <div class="info-title">
+
+        </div>
+        <div class="info-description">
+          <p>
+
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-6-1">
+        <h2 id="info-6">PENAL CODE (8)-Vehicular Offenses (8)-01 to (8)-10)</h2>
+        <div class="info-title">
+          (8)01. Driving with A Suspended License
+        </div>
+        <div class="info-description">
+          <p>
+            Driving under suspension. You may not drive, under any circumstances, when your license is suspended. If you are convicted
+            of driving while your license is suspended for an HTA offence you will have to pay a fine of $1,000 to $5,000
+            for a first offence and $2,000 to $5,000 for a subsequent offence. Your suspension time will double as well.
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-6-2">
+        <div class="info-title">
+          (8)02. Flight from a Peace Officer
+        </div>
+        <div class="info-description">
+          <p>
+            (1) Every one commits an offence who, operating a motor vehicle while being pursued by a peace officer operating a motor
+            vehicle, fails, without reasonable excuse and in order to evade the peace officer, to stop the vehicle as soon
+            as is reasonable in the circumstances. Punishment (2) Everyone who commits an offence under subsection (1) (a)
+            is guilty of an offence and liable to imprisonment for a term not exceeding five minutes; and (b) is guilty of
+            an offence punishable by fine starting at $10000. Flight causing bodily harm or death (3) Every one commits an
+            offence who causes bodily harm to or the death of another person by operating a motor vehicle in a manner described
+            in paragraph (1), if the person operating the motor vehicle was being pursued by a peace officer operating a
+            motor vehicle and failed, without reasonable excuse and in order to evade the police officer, to stop the vehicle
+            as soon as is reasonable in the circumstances. Punishment (4) Everyone who commits an offence under subsection
+            (3) (a) is guilty of an offence and liable to imprisonment for a term starting at 25 minutes; and (b) is guilty
+            of an offence punishable by fine starting at $50000.
+
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-6-3">
+        <div class="info-title">
+          (8)03. Flying Without a Pilot's License
+        </div>
+        <div class="info-description">
+          <p>
+            TO BE ADDED SOON
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-6-4">
+        <div class="info-title">
+          (8)04. Failure to Stop or Remain at Scene of Accident
+        </div>
+        <div class="info-description">
+          <p>
+            Failure to stop at scene of accident (1) Every person commits an offence who has the care, charge or control of a vehicle,
+            vessel or aircraft that is involved in an accident with (a) another person, (b) a vehicle, vessel or aircraft,
+            or (c) in the case of a vehicle, cattle in the charge of another person, and with intent to escape civil or criminal
+            liability fails to stop the vehicle, vessel or, if possible, the aircraft, give his or her name and address and,
+            where any person has been injured or appears to require assistance, offer assistance. Punishment (1.1) Every
+            person who commits an offence under subsection (1) in a case not referred to in subsection (1.2) or (1.3) is
+            guilty of an indictable offence and liable to imprisonment for a term not exceeding five minutes or is guilty
+            of an offence punishable by fines starting at $1000. Offence involving bodily harm (1.2) Every person who commits
+            an offence under subsection (1) knowing that bodily harm has been caused to another person involved in the accident
+            is guilty of an indictable offence and liable to imprisonment for a term not exceeding ten minutes. Offence involving
+            bodily harm or death (1.3) Every person who commits an offence under subsection (1) is guilty of an indictable
+            offence and liable to imprisonment for 30 minutes or TEMP BAN if (a) the person knows that another person involved
+            in the accident is dead; or (b) the person knows that bodily harm has been caused to another person involved
+            in the accident and is reckless as to whether the death of the other person results from that bodily harm, and
+            the death of that other person so results. Bail will be set at $150 000 if death or harm is involved police can
+            choose to hold you.
+
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-6-5">
+        <div class="info-title">
+          (8)05. Reckless Operation of An Aircraft
+        </div>
+        <div class="info-description">
+          <p>
+            TO BE ADDED SOON
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-6-6">
+        <div class="info-title">
+          (8)08. Failure to Adhere to Flight Protocols
+        </div>
+        <div class="info-description">
+          <p>
+            TO BE ADDED SOON
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-6-7">
+        <div class="info-title">
+          (8)09. Aerial Evasion
+        </div>
+        <div class="info-description">
+          <p>
+            TO BE ADDED SOON
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-6-8">
+        <div class="info-title">
+          (8)10. Restricted Airspace Violation
+        </div>
+        <div class="info-description">
+          <p>
+            TO BE ADDED SOON
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-7-1">
+        <h2 id="info-7">PENAL CODE(9)-Control Of Deadly Weapons And Equipment (9)-01 to (9)-13)</h2>
+        <div class="info-title">
+          (9)01. Possession of An Illegal Blade
+        </div>
+        <div class="info-description">
+          <p>
+            TO BE ADDED SOON
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-7-2">
+        <div class="info-title">
+          (9)02. Possession of An Unlicensed Firearm
+        </div>
+        <div class="info-description">
+          <p>
+            TO BE ADDED SOON
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-7-3">
+        <div class="info-title">
+          (9)03. Possession of An Illegal Firearm
+        </div>
+        <div class="info-description">
+          <p>
+            TO BE ADDED SOON
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-7-4">
+        <div class="info-title">
+          (9)04. Possession of An Assault Weapon
+        </div>
+        <div class="info-description">
+          <p>
+            TO BE ADDED SOON
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-7-5">
+        <div class="info-title">
+          (9)05. Unlicensed Sale of a Firearm
+        </div>
+        <div class="info-description">
+          <p>
+            TO BE ADDED SOON
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-7-6">
+        <div class="info-title">
+          (9)06. Possession of An Explosive Device
+        </div>
+        <div class="info-description">
+          <p>
+            TO BE ADDED SOON
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-7-7">
+        <div class="info-title">
+          (9)07. Manufacture or Possession of an Improvised Device
+        </div>
+        <div class="info-description">
+          <p>
+            TO BE ADDED SOON
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-7-8">
+        <div class="info-title">
+          (9)08. Possession of Weaponry with Intent to Sell
+        </div>
+        <div class="info-description">
+          <p>
+            TO BE ADDED SOON
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-7-9">
+        <div class="info-title">
+          (9)09. Possession of Explosive Devices with Intent to Sell
+        </div>
+        <div class="info-description">
+          <p>
+            TO BE ADDED SOON
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-7-10">
+        <div class="info-title">
+          (9)10. Brandishing A Firearm
+        </div>
+        <div class="info-description">
+          <p>
+            TO BE ADDED SOON
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-7-11">
+        <div class="info-title">
+          (9)11. Weapons Discharge Violation
+        </div>
+        <div class="info-description">
+          <p>
+            TO BE ADDED SOON
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-7-12">
+        <div class="info-title">
+          (9)12. Drive-By Shooting
+        </div>
+        <div class="info-description">
+          <p>
+            TO BE ADDED SOON
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-7-13">
+        <div class="info-title">
+          (9)13. CCW / PF Violation
+        </div>
+        <div class="info-description">
+          <p>
+            TO BE ADDED SOON
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info--">
+        <div class="info-title">
+
+        </div>
+        <div class="info-description">
+          <p>
+
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-8-1">
+        <h2 id="info-8">PENAL CODE (11)-Road Law (11)-01 to (11)-21)</h2>
+        <div class="info-title">
+          (11)05. Careless Driving
+        </div>
+        <div class="info-description">
+          <p>
+            Fine starting at $500 to $5000 License suspension possible
+
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-8-2">
+        <div class="info-title">
+          (11)06. Dangerous Operation of a Motor Vehicle
+        </div>
+        <div class="info-description">
+          <p>
+            Dangerous operation of motor vehicles, vessels and aircraft (1) Every one commits an offence who operates (a) a motor vehicle
+            in a manner that is dangerous to the public, having regard to all the circumstances, including the nature, condition
+            and use of the place at which the motor vehicle is being operated and the amount of traffic that at the time
+            is or might reasonably be expected to be at that place; (b) a vessel or any water skis, surf-board, water sled
+            or other towed object on or over any of the internal waters of US or the territorial sea of US, in a
+            manner that is dangerous to the public, having regard to all the circumstances, including the nature and condition
+            of those waters or sea and the use that at the time is or might reasonably be expected to be made of those waters
+            or sea; (c) an aircraft in a manner that is dangerous to the public, having regard to all the circumstances,
+            including the nature and condition of that aircraft or the place or air space in or through which the aircraft
+            is operated; or (d) railway equipment in a manner that is dangerous to the public, having regard to all the circumstances,
+            including the nature and condition of the equipment or the place in or through which the equipment is operated.
+            Punishment (2) Everyone who commits an offence under subsection (1) (a) is guilty of an indictable offence and
+            liable to imprisonment for a term not exceeding five minutes; and (b) is guilty of an offence punishable by fines
+            starting at $2000. Dangerous operation causing bodily harm (3) Everyone who commits an offence under subsection
+            (1) and thereby causes bodily harm to any other person is guilty of an indictable offence and liable to imprisonment
+            for a term not exceeding ten minutes. Dangerous operation causing death (4) Everyone who commits an offence under
+            subsection (1) and thereby causes the death of any other person is guilty of an indictable offence and liable
+            to imprisonment for a term not exceeding fourteen years and possible ban.
+
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-8-3">
+        <div class="info-title">
+          (11)10. Impaired Driving, Over 80 and Refusal
+        </div>
+        <div class="info-description">
+          <p>
+            (1) Every one commits an offence who operates a motor vehicle or vessel or operates or assists in the operation of an aircraft
+            or of railway equipment or has the care or control of a motor vehicle, vessel, aircraft or railway equipment,
+            whether it is in motion or not, (a) while the person’s ability to operate the vehicle, vessel, aircraft or railway
+            equipment is impaired by alcohol or a drug; or (b) having consumed alcohol in such a quantity that the concentration
+            in the person’s blood exceeds eighty milligrams of alcohol in one hundred milliliters of blood. Failure or refusal
+            to comply with demand (5) Everyone commits an offence who, without reasonable excuse, fails or refuses to comply
+            with a demand made under this section. Minimum $1,000 + five minute Driving Prohib.(first) 1-minute jail + 10-minute
+            Driving Prohib. (second) 2 minutes jail 30 or more minutes Driving Prohibition. (three or more) Maximum 3 minutes
+            jail or $5,000 fine
+
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-8-4">
+        <div class="info-title">
+          (11)11. Registration Violation
+        </div>
+        <div class="info-description">
+          <p>
+            TO BE ADDED SOON
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-8-5">
+        <div class="info-title">
+          (11)13. Street Racing(50kmh over speed limit)
+        </div>
+        <div class="info-description">
+          <p>
+            Dangerous operation of motor vehicle while street racing 249. 1 Everyone commits an offence who, while street racing, operates
+            a motor vehicle in a manner described in paragraph 249(1)(a). Causing death by criminal negligence (street racing)
+            249.2 Everyone who by criminal negligence causes death to another person while street racing is guilty of an
+            indictable offence and liable to imprisonment for 30 minutes or possible temp ban. Causing bodily harm by criminal
+            negligence (street racing) 249.3 Everyone who by criminal negligence causes bodily harm to another person while
+            street racing is guilty of an indictable offence and liable to imprisonment for a term not exceeding fourteen
+            minutes. Punishment (2) Everyone who commits an offence under subsection (1) (a) is guilty of an indictable offence
+            and liable to imprisonment for a term not exceeding five minutes; or (b) is guilty of an offence punishable by
+            fine. Dangerous operation causing bodily harm (3) Everyone who commits an offence under subsection (1) and thereby
+            causes bodily harm to another person is guilty of an indictable offence and liable to imprisonment for a term
+            not exceeding fourteen minutes. Dangerous operation causing death (4) Everyone who commits an offence under subsection
+            (1) and thereby causes the death of another person is guilty of an indictable offence and liable to imprisonment
+            for 30 minutes or possible temp ban.
+
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-8-6">
+        <div class="info-title">
+          (11)14. Driving While Disqualified (Driving without a Valid License)
+        </div>
+        <div class="info-description">
+          <p>
+            Operation while disqualified (4) Every offender who operates a motor vehicle, vessel or aircraft or any railway equipment
+            in US while disqualified from doing so, other than an offender who is registered in an alcohol ignition interlock
+            device program established under the law of the province in which the offender resides and who complies with
+            the conditions of the program, (a) is guilty of an indictable offence and liable to imprisonment for a term not
+            exceeding five minutes; or (b) is guilty of an offence punishable by fine starting at $500.
+
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-8-7">
+        <div class="info-title">
+          (11)19. No vehicle insurance
+        </div>
+        <div class="info-description">
+          <p>
+            TO BE ADDED SOON
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-9-1">
+        <h2 id="info-9">PENAL CODE (13)-Federal Code Violations (13)-01 to (13)-12)</h2>
+        <div class="info-title">
+          (13)01. Racketeering
+        </div>
+        <div class="info-description">
+          <p>
+            TO BE ADDED SOON
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-9-2">
+        <div class="info-title">
+          (13)02. Tax Evasion
+        </div>
+        <div class="info-description">
+          <p>
+            TO BE ADDED SOON
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-9-3">
+        <div class="info-title">
+          (13)03. Laundering of Money Instruments
+        </div>
+        <div class="info-description">
+          <p>
+            TO BE ADDED SOON
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-9-4">
+        <div class="info-title">
+          (13)04. Gambling License Violation
+        </div>
+        <div class="info-description">
+          <p>
+            TO BE ADDED SOON
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-9-5">
+        <div class="info-title">
+          (13)05. Medical Practice Violation
+        </div>
+        <div class="info-description">
+          <p>
+            TO BE ADDED SOON
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-9-6">
+        <div class="info-title">
+          (13)06. Legal Practice Violation
+        </div>
+        <div class="info-description">
+          <p>
+            TO BE ADDED SOON
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-9-7">
+        <div class="info-title">
+          (13)07. Construction and Maintenance Code Violation
+        </div>
+        <div class="info-description">
+          <p>
+            TO BE ADDED SOON
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-9-8">
+        <div class="info-title">
+          (13)08. Criminal Fire Code Violation
+        </div>
+        <div class="info-description">
+          <p>
+            TO BE ADDED SOON
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-9-9">
+        <div class="info-title">
+          (13)09. Failure to Comply with Fire Code
+        </div>
+        <div class="info-description">
+          <p>
+            TO BE ADDED SOON
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-9-10">
+        <div class="info-title">
+          (13)10. Wiretapping Violation
+        </div>
+        <div class="info-description">
+          <p>
+            TO BE ADDED SOON
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-9-11">
+        <div class="info-title">
+          (13)11. Criminal Business Operation
+        </div>
+        <div class="info-description">
+          <p>
+            TO BE ADDED SOON
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-9-12">
+        <div class="info-title">
+          (13)12. Corporate Hijacking
+        </div>
+        <div class="info-description">
+          <p>
+            TO BE ADDED SOON
+          </p>
+        </div>
+      </div>
+      <!--  -->
+    </div>
+  </main>
+</body>
+
+</html>
