@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <style>
+    @import url(https://fonts.googleapis.com/css?family=Ruluko);
+    @import url(http://weloveiconfonts.com/api/?family=fontawesome);
+
+    [class*="fontawesome-"]:before {
+      font-family: 'FontAwesome', sans-serif;
+    }
+
+    * {
+      font-size: 100%;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+
+    html {
+      font-size: 100%;
+      height: 100%;
+      width: 100%;
+      box-sizing: border-box;
+      background: rgb(137, 193, 223);
+    }
+
+    body {
+      font-family: 'Ruluko', sans-serif;
+      font-size: 16px;
+      width: 100%;
+      margin: 0 auto;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+    }
+
+    body header {
+      top: 0;
+      margin: 0;
+      height: 4rem;
+      background: dodgerblue;
+      text-shadow: 0.5px 0.5px black;
+      box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.3);
+      -webkit-transition: all 0.7s ease;
+      transition: all 0.7s ease;
+      z-index: 1;
+    }
+
+    body header h1 {
+      margin-left: 1.5rem;
+      color: whitesmoke;
+      line-height: 1rem;
+    }
+
+    body header h1 span {
+      float: right;
+      margin-right: 2rem;
+      font-size: 3rem;
+      line-height: 2rem;
+      cursor: pointer;
+    }
+
+    body h2 {
+      font-size: 1.75em;
+    }
+
+    main {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+      align-items: stretch;
+    }
+
+    main .sidebar {
+      background: dodgerblue;
+      min-width: 180px;
+      max-width: 250px;
+      margin-bottom: 0;
+      color: whitesmoke;
+      text-shadow: 1px 1px #0d0d0d;
+      overflow: auto;
+      height: 600px;
+    }
+
+    main .sidebar ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+    }
+
+    main .sidebar li {
+      -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+      flex: 1 1 auto;
+      display: block;
+      margin: 0;
+      padding: 0;
+      border-bottom: 2px solid #2F2F2F;
+    }
+
+    main .sidebar li:hover {
+      border-right: .5rem solid #81A4D4;
+      box-shadow: 0 6px 4px -4px rgba(0, 0, 0, 0.4);
+    }
+
+    main .sidebar a {
+      color: whitesmoke;
+      display: block;
+      padding: 1.5em .2em;
+      text-decoration: none;
+      text-align: center;
+      font-size: 1.2em;
+      -webkit-transition: all 1s ease;
+      transition: all 1s ease;
+    }
+
+    main .sidebar a:before {
+      content: "SideBar";
+    }
+
+    main .sidebar a:hover {
+      color: #81A4D4;
+      margin-left: 1rem;
+    }
+
+    body>header {
+      height: 9rem;
+    }
+
+    body>header h1 {
+      line-height: 2rem;
+    }
+
+    body>header h1 span {
+      line-height: 8rem;
+    }
+
+    main {
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+    }
+
+    main .sidebar {
+      -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+      flex-grow: 1;
+    }
+
+    main .sidebar ul li {
+      margin: 0;
+      list-style-type: none;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+    }
+
+    main .sidebar ul li:last-child {
+      border-bottom: none;
+    }
+
+    main li {
+      -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+      flex: 1 1 auto;
+      margin: 0;
+      padding: 0;
+    }
+
+    main .sidebar a:before {
+      content: "";
+    }
+
+    #all-content {
+      flex: 1;
+    }
+
+    .info {
+      background-color: #294860;
+      border-radius: 20px;
+      /* The border-radius gives rounded corners.*/
+      color: white;
+      padding: 10px;
+      margin: 10px auto;
+    }
+
+    h2 {
+      margin: 10px;
+    }
+
+    .info {
+      background-color: #DFEAF1;
+      padding: 4px;
+      margin: 10px;
+      border-radius: 4px;
+      color: black;
+    }
+
+    .info-title {
+      font-size: 3em;
+      margin: 8px;
+      text-align: center;
+      color: #294860;
+    }
+
+    .info-description {
+      font-weight: lighter;
+      /* this makes the font a bit less dark */
+      font-size: 1.3em;
+      margin: 6px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Dark Project Community Rules & Guidelines</h1>
+  </header>
+  <main>
+    <div class="sidebar">
+      <div class="TOC">
+        <h1>Table of Contents</h1>
+        <!-- Below this is a <ol> element. "ol" stands for "ordered list." -->
+        <ol>
+          <!-- <li> means "list item" -->
+          <li>
+            <a href="#info-1">Rule List</a>
+            <!-- Next I add an "unordered list" within the "list item" of my "ordered list" -->
+            <ul>
+              <li>
+                <a href="#info-1-1">1. Respect for the community</a>
+              </li>
+              <li>
+                <a href="#info-1-2">2. Deathmatching & RDM </a>
+              </li>
+              <li>
+                <a href="#info-1-3">3. New Life Rule & Revenge Killing</a>
+              </li>
+              <li>
+                <a href="#info-1-4">4. Power-gaming </a>
+              </li>
+              <li>
+                <a href="#info-1-5">5. Metagaming</a>
+              </li>
+              <li>
+                <a href="#info-1-6">6. Offensive Roleplay </a>
+              </li>
+              <li>
+                <a href="#info-1-7">7. Acknowledging Out of Character Chat</a>
+              </li>
+              <li>
+                <a href="#info-1-8">8. Committing Crimes in Unrealistic Areas</a>
+              </li>
+              <li>
+                <a href="#info-1-9">9. Contracted Killings or Assassinations</a>
+              </li>
+              <li>
+                <a href="#info-1-10">10. Administrator Instructions/Rulings </a>
+              </li>
+              <li>
+                <a href="#info-1-11">11. Unacceptable Character Names</a>
+              </li>
+              <li>
+                <a href="#info-1-12">12. Unacceptable Game Modifications</a>
+              </li>
+              <li>
+                <a href="#info-1-13">13. Destroying Personal Property</a>
+              </li>
+              <li>
+                <a href="#info-1-14">14. Exploiting Bugs</a>
+              </li>
+              <li>
+                <a href="#info-1-15">15. Interactions between your Characters</a>
+              </li>
+              <li>
+                <a href="#info-1-16">16. Scamming and Robbery</a>
+              </li>
+              <li>
+                <a href="#info-1-17">17. Account Access</a>
+              </li>
+              <li>
+                <a href="#info-1-18">18. Circumventing a Ban</a>
+              </li>
+              <li>
+                <a href="#info-1-19">19. Suicide/Logging to avoid Roleplay</a>
+              </li>
+              <li>
+                <a href="#info-1-20">20. Selling IC items OOC</a>
+              </li>
+              <li>
+                <a href="#info-1-21">21. Abuse of Reports or Help</a>
+              </li>
+              <li>
+                <a href="#info-1-22">22. Healing in a Situation</a>
+              </li>
+              <li>
+                <a href="#info-1-23">23. Exploiting Scripts & GTA V Mechanics</a>
+              </li>
+              <li>
+                <a href="#info-1-24">24. Unacceptable Roleplay</a>
+              </li>
+              <li>
+                <a href="#info-1-25">25. Failure to Roleplay / Unrealistic Roleplay</a>
+              </li>
+              <li>
+                <a href="#info-1-26">26. Lying to a Staff Member</a>
+              </li>
+              <li>
+                <a href="#info-1-27">27. Inappropriate Clothing Combinations</a>
+              </li>
+              <li>
+                <a href="#info-1-28">28. AFKing/Paycheck Farming</a>
+              </li>
+              <li>
+                <a href="#info-1-29">29. Role Playing a Character Under the Age of 16</a>
+              </li>
+              <li>
+                <a href="#info-1-30">30. Proof of Obscure/Beneficial RP</a>
+              </li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+    </div>
+    <div id="all-content">
+      <h1>Rules & Guidelines</h1>
+      <p>
+        This is our rules and guidelines for the server.
+      </p>
+      <div class="info">
+        <h2 id="info-1">Rule Explanations</h2>
+        <div class="info" id="info-1-1">
+          <div class="info-title">
+            1. Respect for the community
+          </div>
+          <div class="info-description">
+            <p>
+              This is the first and most important rule. You should be respectful to other players and administrators. You should always
+              keep in mind that whatever you do in-game, it should not infringe on others' capacity to enjoy the game. this
+              means not sending someone angry or offensive out-of-character messages because of an in-character subject or
+              event. Also, do not argue with an administrator because you disagree with an administrative ruling. Please
+              use the fill out a ticket in our website to deal with the issue privately. Furthermost NO TROLLING player,
+              members, police, admin and etc.
+
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="info" id="info-1-2">
+        <div class="info-title">
+          2. Deathmatching & RDM
+        </div>
+        <div class="info-description">
+          <p>
+            Killing another player for little or no in-character reason is strictly forbidden. Deliberately attempting to start a fight
+            with little to no reason is also, not allowed. Going up to another player and insulting them in-character with
+            the sole intention of escalating the situation to a fight is also not allowed without the proper roleplay scenario
+            (bar fights, car accidents, etc.). There will be absolutely no RANDOM DEATH MATCHING OR VECHICLE DEATCH MATCHING.
+            If a traffic accident has occurred while a player was hit by a car it need to be roleplayed out with ems and
+            the police.
+
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-1-3">
+        <div class="info-title">
+          3. New Life Rule & Revenge Killing
+        </div>
+        <div class="info-description">
+          <p>
+            You are not allowed to seek out and/or kill anyone involved with your character's death. When you are killed, your character
+            loses all memory leading up to and including their death unless they were rescued by paramedics. This may involve
+            no longer knowing or recognizing your killer(s) after dying. You must also do your absolute best to avoid the
+            player(s) who killed you, and definitely not kill them, provoke them, or otherwise engage them in any role play
+            situation. If you are killed by a player, or a group of players, or the police you will forget everything involving
+            your character and the opposing character(s) in that situation. If you are killed in an area that is not crucial
+            to your character (house, or job), you should avoid the area to make a better roleplay for a while. This all
+            also applies to any death even accidental.
+
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-1-4">
+        <div class="info-title">
+          4. Power-gaming
+        </div>
+        <div class="info-description">
+          <p>
+            Players cannot solely use the in-game mechanics to steal another player's vehicle whilst said vehicle is occupied. The situation
+            must be role-played out between both parties. If your vehicle does not possess a license plate due to game mechanics,
+            you may not roleplay that it has one anyway. Any vehicle purchased from the dealership that does not have a visible
+            plate will be considered registered as a recreational vehicle. These vehicles are for off-road use only and must
+            be towed to your destination of choice. If you are in possession of such a vehicle on city streets will you be
+            subject to being pulled over and issues fines and an impound. 4.1 How to roleplay firearm damage 200-100 HP can
+            be treated as damage to your vest 99-50 HP is to be treated as a flesh wounds. You should see a doctor to lower
+            your risk of infection. 49-1 HP is to be treated as a center mass shot. You'll be moving slowly and can't walk
+            far. You WILL need medical attention 0 HP You are incapacitated. You may barely move your arms, and speak in
+            /low. You must remain in the same place to await medical attention. After ten minutes you will be deemed dead
+            and may respawn. 4.2 How to deal with vehicle collisions You are to roleplay all damage dealt to your car. You
+            are not to head on wreck into other vehicles (even lag slam head on ramming). If you head on wreck into a stationary
+            object with your vehicle at a speed above 45 MPH, you will need to roleplay that that vehicle is disabled for
+            that situation. And also roleplay any injuries you may have received in the accident. You must report any accident
+            with over $1000 dollars of damage. Failure to do so may result in a fine being issued to you.
+
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-1-5">
+        <div class="info-title">
+          5. Metagaming
+        </div>
+        <div class="info-description">
+          <p>
+            Communicating information that your character does not know to others, sharing information via chat, TeamSpeak, Discord or
+            any other method, that other characters would not feasibly be able to see or otherwise interpret, sharing out-of-character
+            information through an in-character medium, or taking in-character action based on information gained from an
+            out-of-character source are all classified as metagaming. Only authorized legal organizations are permitted to
+            use TeamSpeak & Discord for in-character communication. 5.1 Chat Box Rules You cannot use internet slang or unrealistic
+            abbreviations in in-character chats, nor can you use symbols other than standard punctuation, except when appropriate
+            (i.e. in-character emails, text messages, or other digital communication). You are not permitted to use languages
+            other than English publicly, in-character or out-of-character, except common words for flavor purposes. Nonstandard
+            punctuation (i.e. smileys or other constructs) is not permitted. To indicate a pause in conversation, you can
+            use an ellipsis – “…” – and to indicate a sudden break in conversation, you can use a dash – “— “. Finally, only
+            certain varieties of legal organizations are permitted to use TeamSpeak for in-character communication. All no
+            game related chat is to be held in Out OF Character chat but typing /ooc "message to server here". If you need
+            help please use the help channel in the chat. 5.3 In Character Live-Streaming Due to the complexities surrounding
+            in character streaming, live in character streams are not permitted. Streaming is permitted, however cannot be
+            treated as in character and use of information gained directly from a player's stream will fall under metagaming.
+
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-1-6">
+        <div class="info-title">
+          6. Offensive Roleplay
+        </div>
+        <div class="info-description">
+          <p>
+            You are not permitted to roleplay sexual acts, detailed acts of torture or dismemberment, cannibalism, or other extremely
+            morbid activities without the express out-of-character consent of all participants. If you do end up getting
+            permission, that permission can be withdrawn at any time. The roleplay must take place in private, far away from
+            where any individuals who have not given their consent for this type of roleplay might innocently enter. If at
+            any time you revoke your permission for Offensive Roleplay, or if it is being forced upon you without your permission
+            being given, you may log out to avoid this roleplay. Please report alerting the administration team before you
+            do so.
+
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-1-7">
+        <div class="info-title">
+          7. Acknowledging Out of Character Chat
+        </div>
+        <div class="info-description">
+          <p>
+            Players have the right to ignore other players' out-of-character discussions if they wish, unless it is to ask why they were
+            killed. However, players are not permitted to ignore administrators’ communication or rulings. Furthermore, do
+            not avoid out-of-character communications with an administrator, administrators, avoid answering a player who
+            asks you why you killed them and spam someone in order to avoid roleplaying with them simply because it doesn't
+            fit your character's agenda.
+
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-1-8">
+        <div class="info-title">
+          8. Committing Crimes in Unrealistic Areas
+        </div>
+        <div class="info-description">
+          <p>
+            Committing any type of obvious crime in a conspicuous area (such as a bank, police station, hospital or any other obviously
+            populated area) is forbidden. The following areas are considered unrealistic areas to commit a crime: All banks,
+            scripted car dealerships, vehicle rental locations, police / sheriff stations, fire departments, hospitals, fish
+            sell points, two pier fishing locations, the Los Santos International Airport, trucker depot, scripted tattoo
+            parlors, scripted barber shops, scripted clothing stores, scripted plastic surgeons, and Legion Square. If someone
+            has already committed a crime and the roleplay is taken to such an area, it may be acceptable. This means don't
+            rob somebody standing in front of the bank, police station or hospital. Attempt to kidnap somebody in front or
+            inside of a heavily populated area. Crimes committed outside of a safe zone with the sole intention of leading
+            it into one will not be tolerated. We will allow crimes to continue if relocation into the safe zone itself is
+            unavoidable, but attempts to abuse this will be met with swift punishment. Do not kidnap a player, subsequently
+            leading them to Del Perro Pier to drop them off the edge. Don't kidnap a player and lead them to the airport
+            to steal their plane. Do not kidnap a police officer to then demand they to release your car from the impound
+            lot and etc.
+
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-1-9">
+        <div class="info-title">
+          9. Contracted Killings or Assassinations
+        </div>
+        <div class="info-description">
+          <p>
+            No player or organization is permitted to have “contract killing” as their sole focus. Specific players or members of organizations
+            recognized by the administration may be able to participate in contract killing. Such members must be vetted
+            and approved by organization staff and the Operation Directors. Only a limited number from accredited organizations
+            are allowed to apply.
+
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-1-10">
+        <div class="info-title">
+          10. Administrator Instructions/Rulings
+        </div>
+        <div class="info-description">
+          <p>
+            Administrator instructions or rulings are final and nonnegotiable. If an administrator’s ruling seems to have been made in
+            error, the dispute should be handled outside of the game via a staff complaint on the forum.
+
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-1-11">
+        <div class="info-title">
+          11. Unacceptable Character Names
+        </div>
+        <div class="info-description">
+          <p>
+            A player name must be unique and realistic. You may not use the name of a famous person in real life or from history, nor
+            may you use the name of an easily recognizable or already existing character from any form of fiction. Simply
+            just be creative and don't create a character named "Justin Bieber" because you want to roleplay a superstar
+            or a basic gamer tag like "RabbitKiller44". You need to have a first and last name.
+
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-1-12">
+        <div class="info-title">
+          12. Unacceptable Game Modifications
+        </div>
+        <div class="info-description">
+          <p>
+            You are not permitted to use a modification that grants you an advantage on the server.DO NOT install a game modification
+            that alters vehicle handling, makes a vehicle faster, or gains you any type of advantage. DO NOT use any type
+            of cheat, modification, plugin, script or other third-party game additions. If caught cheating you will be banned.
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-1-13">
+        <div class="info-title">
+          13. Destroying Personal Property
+        </div>
+        <div class="info-description">
+          <p>
+            In order to heavily damage or destroy personal property, you must have permission from a GM or a member of the Property Owner.
+            Your justification for destroying property must be solid and well-explained, and the GM or Property Staff member
+            must supervise your roleplay for the duration of the scenario. If you damage something you need to pay for it.
+
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-1-14">
+        <div class="info-title">
+          14. Exploiting Bugs
+        </div>
+        <div class="info-description">
+          <p>
+            You are not permitted to exploit bugs for personal gain. You are required to report a bug if you find one. DO NOT abuse a
+            bug that allows you to, essentially, spawn in money or gain any type of advantage that wasn't meant to be.
+
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-1-15">
+        <div class="info-title">
+          15. Interactions between your Characters
+        </div>
+        <div class="info-description">
+          <p>
+            Your personal characters cannot know each other from an in-character perspective. You are also not allowed to interact between
+            the two characters – for example, transferring money or other assets between them (character to character or
+            through a friend) – without prior administrator permission, or whatever is transferred will be deleted. The only
+            exception to this rule would be if your characters are family members and have the same last name.
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-1-16">
+        <div class="info-title">
+          16. Scamming and Robbery
+        </div>
+        <div class="info-description">
+          <p>
+            You cannot scam a player out of more than $30,000. You cannot rob more than $15,000 from a player. Assets such as real estate,
+            vehicles, bank accounts, etc. cannot be scammed or stolen. Note that carjacking and temporarily stealing a car
+            is permitted -- forcing a player to sell you a vehicle for $0 via because the vehicle was "stolen" is, however,
+            not allowed. You are not allowed to create an advertisement for the sole purpose of robbing any interested individuals.
+            Conversely, you cannot buy a vehicle from somebody and then rob them after the fact. In the instance that you
+            are robbing a player, you cannot kill that player unless they outright refuse to comply, provide resistance,
+            or provoke you to inflict harm. You cannot rob a firearm from a Police Officer, dead or alive, unless authorization
+            is granted by a Admin and the roleplay is supervised. This type of roleplay will not be authorized regularly
+            for the sake of realism.
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-1-17">
+        <div class="info-title">
+          17. Account Access
+        </div>
+        <div class="info-description">
+          <p>
+            Your account is yours and yours alone. You are responsible if your account is used by another person, and by doing so, you
+            link your identities in our records and may end up getting yourself banned for the other person’s actions as
+            a result. You are likewise responsible if a friend or sibling logs on your computer and somehow gets you banned
+            or otherwise punished. Additionally, you are not allowed to sell, transfer, lend, or share an account with anyone
+            else for any reason, for any amount of time.
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-1-18">
+        <div class="info-title">
+          18. Circumventing a Ban
+        </div>
+        <div class="info-description">
+          <p>
+            While you are banned from the game server, the TeamSpeak & Discord server, the forums, etc., you are not allowed to register
+            another account or use an alternate account until the ban period has expired. Otherwise, your other account may
+            also be banned and your original ban extended.
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-1-19">
+        <div class="info-title">
+          19. Suicide/Logging to avoid Roleplay
+        </div>
+        <div class="info-description">
+          <p>
+            You are not allowed to kill your character, log off or forcibly re-spawn to avoid situations. If you have to log off but
+            you are in the middle of a roleplay situation, you will need to get permission from all parties involved before
+            doing so. This also includes police chases. If you kill yourself to avoid jail you will still be arrested. If
+            you commit a crime, you must wait twenty minutes prior to logging off.
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-1-20">
+        <div class="info-title">
+          20. Selling IC items OOC
+        </div>
+        <div class="info-description">
+          <p>
+            You cannot make out-of-character deals for in-character items. You cannot sell in-character items for out-of-character items.
+            You cannot give away items for out-of-character reasons. This includes the attempted sale/solicitation of selling
+            items. This means you can't sell your car for five dollars real money.
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-1-21">
+        <div class="info-title">
+          21. Abuse of Reports or Help
+        </div>
+        <div class="info-description">
+          <p>
+            You are not allowed to use reports or help resources for anything other than server-related concerns or questions.
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-1-22">
+        <div class="info-title">
+          22. Healing in a Situation
+        </div>
+        <div class="info-description">
+          <p>
+            You cannot use any healing items while in the middle of a dangerous situation. Do not use healing items during any type of
+            fight or roleplay situation where it would be impossible or unrealistic or use a healing item during a gunfight
+            where it would be impossible or unrealistic.
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-1-23">
+        <div class="info-title">
+          23. Exploiting Scripts & GTA V Mechanics
+        </div>
+        <div class="info-description">
+          <p>
+            Knowingly exploiting the script and/or the GTA V engine in order to gain an advantage is not allowed. This includes abusing
+            the physics of GTA V in order to do unrealistic things.
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-1-24">
+        <div class="info-title">
+          24. Unacceptable Roleplay
+        </div>
+        <div class="info-description">
+          <p>
+            Roleplaying as terrorists, separatists, intelligence agency members, private military, federal or foreign government employees,
+            or similar avenues of roleplay (individually or in organizations) that would require entities such as the state
+            or federal government to intercede are explicitly forbidden, since those entities are not generally present in
+            the server. You may not roleplay a character from a movie, TV show, comic book, or any other type of related
+            media. While you are allowed to take traits or inspiration from these types of characters, blatantly copying
+            them to use on VIRP is not allowed. This includes both personality and appearance.
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-1-25">
+        <div class="info-title">
+          25. Failure to Roleplay / Unrealistic Roleplay
+        </div>
+        <div class="info-description">
+          <p>
+            Failing to roleplay is strictly forbidden. Dark Project Community Roleplay is a roleplay serious server; you're expected to be
+            roleplaying at all times. If a situation presents itself where rules are broken, roleplay first, report later.
+            Abusing in game physics or mechanics to gain an edge over another player will result in punishment. You are expected
+            to use script features to assist in roleplay. DO NOT continuously type in out-of-character chat while another
+            player is trying to roleplay with you. YOU MAY NOT roll your vehicle in a pursuit and then use in game mechanics
+            to flip it on its roof and continue driving. You MAY NOT disregard happenings that would result in the death
+            of your character (falls from substantial heights, head shots, fires, head-on collisions, train collisions, etc.)
+            regardless of your OOC health / armor level. You have been shot in the leg yet you keep running acting like nothing
+            has happened. Stop roleplaying and complain in OOC chat because a rule was broken during the roleplay.
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-1-26">
+        <div class="info-title">
+          26. Lying to a Staff Member
+        </div>
+        <div class="info-description">
+          <p>
+            Do not lie to a staff member about anything related to Dark Project Community RP. This includes in-game matters, the forum, Discord,
+            TeamSpeak, or any other entity relating or belonging to Dark Project Community RP. Do Not lie in a report or ticket
+            regarding your vehicle, assets, weapons, ammo, drugs, or any other item that you can obtain in game, attempt
+            to mislead a staff member by creating a fallacy simply to gain an advantage or abuse OOC mediums such as vehicle
+            teleports or asset refunds or falsify videos, screenshots, recordings or other pieces of evidence in refund requests,
+            player complaints, staff complaints, or any other OOC reporting method. </p>
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-1-27">
+        <div class="info-title">
+          27. Inappropriate Clothing Combinations
+        </div>
+        <div class="info-description">
+          <p>
+            Do not use inappropriate/un-realistic clothing combinations whilst using the free mode skins. Any clothing combinations that
+            fall under this rule will be removed.
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-1-28">
+        <div class="info-title">
+          28. AFKing/Paycheck Farming
+        </div>
+        <div class="info-description">
+          <p>
+            Do not AFK on the server for any longer than 10 minutes. Please log out and return when you are ready.
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-1-12">
+        <div class="info-title">
+          29. Role Playing a Character Under the Age of 16
+        </div>
+        <div class="info-description">
+          <p>
+            Do not roleplay a character under the age of 16 years old. You will be banned for good and i mean it.
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-1-12">
+        <div class="info-title">
+          30. Proof of Obscure/Beneficial RP
+        </div>
+        <div class="info-description">
+          <p>
+            There are countless situations where you could take part in somewhat obscure roleplay that would be beneficial to your character
+            by providing them with a customized item. Examples such as: ⦁ Converting your vehicle's center console into a
+            lockable safe to keep your narcotics secure during a delivery. ⦁ Removing your vehicle's license plate, and subsequently
+            committing a series of crimes in attempt to foil police. ⦁ Modifying items of clothing to hide objects, such
+            as a hidden compartment in your shoe, or having sewn a bag of drugs on the interior of your coat. These examples
+            are not against the rules, and you will not face punishment for doing them, but it should be kept in mind that
+            any RP similar to the examples above will require proof. If no proof is provided, your RP will be considered
+            invalid. It is highly recommended that you take screenshots of any RP that involve beneficial items not currently
+            supported by our script. We will happily allow players to take part in complicated RP, but please ensure you
+            have proof, as these examples can be effortlessly fabricated to provide a quick get-out-of-jail free card. Please
+            note that administrators reserve the right to void your RP if the provided proof isn't substantial. Before creating,
+            purchasing, or obtaining a beneficial item, it's highly recommended that players contact an administrator to
+            obtain approval for said item. Administrators reserve the right to deny requests or ideas for these items, as
+            well as removing existing items should they find them unnecessary. Players should make an effort to not stray
+            too far from what our script allows. If something is possible in real life, it does not mean it will be allowed
+            in our server.
+          </p>
+        </div>
+      </div>
+    </div>
+    </div>
+  </main>
+</body>
+
+</html>

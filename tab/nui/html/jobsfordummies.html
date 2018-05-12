@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <style>
+    @import url(https://fonts.googleapis.com/css?family=Ruluko);
+    @import url(http://weloveiconfonts.com/api/?family=fontawesome);
+
+    [class*="fontawesome-"]:before {
+      font-family: 'FontAwesome', sans-serif;
+    }
+
+    * {
+      font-size: 100%;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+
+    html {
+      font-size: 100%;
+      height: 100%;
+      width: 100%;
+      box-sizing: border-box;
+      background: #A6A5A4;
+    }
+
+    body {
+      font-family: 'Ruluko', sans-serif;
+      font-size: 16px;
+      width: 100%;
+      margin: 0 auto;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+    }
+
+    body header {
+      top: 0;
+      margin: 0;
+      height: 4rem;
+      background: #323233;
+      text-shadow: 1px 1px #0d0d0d, -1px -1px #323233;
+      box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.3);
+      -webkit-transition: all 0.7s ease;
+      transition: all 0.7s ease;
+      z-index: 1;
+    }
+
+    body header h1 {
+      margin-left: 1.5rem;
+      color: #A6A5A4;
+      line-height: 1rem;
+    }
+
+    body header h1 span {
+      float: right;
+      margin-right: 2rem;
+      font-size: 1.2rem;
+      line-height: 2rem;
+      cursor: pointer;
+    }
+
+    body h2 {
+      font-size: 1.75em;
+    }
+
+    body footer {
+      text-align: center;
+      bottom: 0;
+      padding: 0;
+      background: #323233;
+      color: #595959;
+      box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    body footer li {
+      display: inline-block;
+      font-size: 1.2rem;
+      line-height: 1.5rem;
+      cursor: pointer;
+      margin-right: 2rem;
+      text-shadow: 1px 1px #0d0d0d, -1px -1px #121212;
+      -webkit-transition: all .5s ease-in;
+      transition: all .5s ease-in;
+    }
+
+    body footer li:hover {
+      color: #81A4D4;
+      text-shadow: -1px -1px #575757, 1px 1px #121212;
+      -webkit-transform: translateY(2px), scale(1.05);
+      transform: translateY(2px), scale(1.05);
+    }
+
+    main {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+      align-items: stretch;
+    }
+
+    main .sidebar {
+      background: #323233;
+      min-width: 180px;
+      max-width: 300px;
+      margin-bottom: 0;
+      color: #A6A5A4;
+      text-shadow: 1px 1px #0d0d0d, -1px -1px #121212;
+      overflow: auto;
+      height: 600px;
+    }
+
+    main .sidebar h2 {
+      text-align: center;
+      margin: 0;
+      padding: 1.2rem;
+      background: #323233;
+      color: #A6A5A4;
+      border-bottom: 2px solid #2F2F2F;
+    }
+
+    main .sidebar h2:after {
+      content: "The SideBar";
+    }
+
+    main .sidebar ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+    }
+
+    main .sidebar li {
+      -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+      flex: 1 1 auto;
+      display: block;
+      margin: 0;
+      padding: 0;
+      border-bottom: 2px solid #2F2F2F;
+    }
+
+    main .sidebar li:hover {
+      border-right: .5rem solid #81A4D4;
+      box-shadow: 0 6px 4px -4px rgba(0, 0, 0, 0.4);
+    }
+
+    main .sidebar a {
+      color: #A6A5A4;
+      display: block;
+      padding: 1.5em .2em;
+      text-decoration: none;
+      text-align: center;
+      font-size: 1.2em;
+      -webkit-transition: all 1s ease;
+      transition: all 1s ease;
+    }
+
+    main .sidebar a:before {
+      content: "SideBar";
+    }
+
+    main .sidebar a:hover {
+      color: #81A4D4;
+      margin-left: 1rem;
+    }
+
+    body>header {
+      height: 9rem;
+    }
+
+    body>header h1 {
+      line-height: 2rem;
+    }
+
+    body>header h1 span {
+      line-height: 8rem;
+    }
+
+    main {
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+    }
+
+    main .sidebar {
+      -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+      flex-grow: 1;
+    }
+
+    main .sidebar h2:after {
+      content: "The TopBar";
+      padding-left: .5rem;
+    }
+
+    main .sidebar ul li {
+      margin: 0;
+      list-style-type: none;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+    }
+
+    main .sidebar ul li:last-child {
+      border-bottom: none;
+    }
+
+    main li {
+      -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+      flex: 1 1 auto;
+      margin: 0;
+      padding: 0;
+    }
+
+    main .sidebar a:before {
+      content: "";
+    }
+
+    footer {
+      font-size: 80%;
+    }
+
+
+    #all-content {
+      flex: 1;
+    }
+
+    .info {
+      background-color: #294860;
+      border-radius: 20px;
+      /* The border-radius gives rounded corners.*/
+      color: white;
+      padding: 10px;
+      margin: 10px auto;
+    }
+
+    h2 {
+      margin: 10px;
+    }
+
+    .info {
+      background-color: #DFEAF1;
+      padding: 4px;
+      margin: 10px;
+      border-radius: 4px;
+      color: black;
+    }
+
+    */ .info-title {
+      font-size: 1.6em;
+      margin: 8px;
+      text-align: center;
+      color: #294860;
+    }
+
+    .info-description {
+      font-weight: lighter;
+      /* this makes the font a bit less dark */
+      font-size: 1.2em;
+      margin: 6px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Job Tutorials&nbsp;&nbsp;</h1>
+  </header>
+  <main>
+    <div class="sidebar">
+      <div class="TOC">
+        <h1>Table of Contents</h1>
+        <!-- Below this is a <ol> element. "ol" stands for "ordered list." -->
+        <ol>
+          <!-- <li> means "list item" -->
+          <li>
+            <a href="#info-1">Job List</a>
+            <!-- Next I add an "unordered list" within the "list item" of my "ordered list" -->
+            <ul>
+              <li>
+                <a href="#info-1-1">Gas Attendant</a>
+              </li>
+              <li>
+                <a href="#info-1-2">Trucking</a>
+              </li>
+              <li>
+                <a href="#info-1-3">Fashion</a>
+              </li>
+              <li>
+                <a href="#info-1-4">Lumber Jack</a>
+              </li>
+              <li>
+                <a href="#info-1-5">Reporter</a>
+              </li>
+              <li>
+                <a href="#info-1-6">Butcher</a>
+              </li>
+              <li>
+                <a href="#info-1-7">Fisherman</a>
+              </li>
+              <li>
+                <a href="#info-1-8">Park Ranger</a>
+              </li>
+              <li>
+                <a href="#info-1-9">Traffic Officer</a>
+              </li>
+              <li>
+                <a href="#info-1-10">Miner</a>
+              </li>
+              <li>
+                <a href="#info-1-11">Mechanic</a>
+              </li>
+              <li>
+                <a href="#info-1-12">Real Estate Agent</a>
+              </li>
+              <li>
+                <a href="#info-1-13">EMS</a>
+              </li>
+              <li>
+                <a href="#info-1-14">Police</a>
+              </li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+    </div>
+    <div id="all-content">
+      <a href="about:blank">Back</a>
+      <a id="back2Top" title="Back to top" href="#">&#10148;</a>
+      <h1>Dark Project Job Guide</h1>
+      <p>
+        This is the how to for all the jobs in our server so far.
+      </p>
+      <div class="info">
+        <h2 id="info-1">Job Discriptions</h2>
+        <div class="info" id="info-1-1">
+          <div class="info-title">
+            Gas Attendant
+          </div>
+          <div class="info-description">
+            <p>
+
+              Head to the job center, you can find it on the map. Once you get to the job center open up the job menu and select the Gas
+              attendant job. Once the job has been selected you'll be able to find the job blips on the map, look for the
+              oil refiners' locker room to go on shift. Once you get to the locker room open up the menu and select the work
+              clothes, after you've done that you'll be able to spawn yourself a work truck at the vehicle spawner located
+              within view of the locker room marker. There is a $2000-dollar deposit for the truck that'll you get back minus
+              any damages to the truck, so drive safe.
+              <br /> Once you've got your work truck, open up the map and find the drill for oil marker and head there. Once you
+              get to the drill site get out of the truck and head into the yellow marker and press E to begin drilling for
+              oil. Continue doing that until you can't hold any more oil, then head back to your truck and find the refine
+              oil marker on the map and head there. Once you get to refine oil get out of the truck head to the marker to
+              begin the process, once its completed get back in you truck and find the mix refined oil marker. Head there
+              and mix the refined oil and then head back to your truck and find the deliver gas marker.
+              <br /> After you've completed this you may do it again or return the truck to the red marker and get your deposit
+              back and your pay. The red marker for this job is by the delivery location. Also, don't forgot to change back
+              into your civilian clothes.
+              <br />
+
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="info" id="info-1-2">
+        <div class="info-title">
+          Trucking Job
+        </div>
+        <div class="info-description">
+          <p>
+            Head to the job center, you can find it on the map. Once you get to the job center open up the job menu and select the Trucking
+            job. Once the job has been selected you'll be able to find the job blips on the map, look for the truckers' locker
+            room to go on shift. Once you get to the locker room open up the menu and select the work clothes, after you've
+            done that you'll be able to spawn yourself a work truck at the vehicle spawner located within view of the locker
+            room marker. There is a $2000-dollar deposit for the truck that'll you get back minus any damages to the truck,
+            so drive safe.
+            <br /> Once you've got your work truck the map should update with GPS locations to make deliveries. Complete the deliveries
+            and head back to the depot. After you've completed this you may do it again or return the truck to the red marker
+            and get your deposit back and your pay. The red marker for this job is by the truck depot. Also, don't forgot
+            to change back into your civilian clothes.
+            <br />
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-1-3">
+        <div class="info-title">
+          Fashion
+        </div>
+        <div class="info-description">
+          <p>
+            Head to the job center, you can find it on the map. Once you get to the job center open up the job menu and select the Fashion
+            Job. Once the job has been selected you'll be able to find the job blips on the map, look for the Dress Designers
+            locker room to go on shift. Once you get to the locker room open up the menu and select the work clothes, after
+            you've done that you'll be able to spawn yourself a work truck at the vehicle spawner located within view of
+            the locker room marker. There is a $200-dollar deposit for the truck that'll you get back minus any damages to
+            the truck, so drive safe.
+            <br /> Once you've got your work truck, open up the map and find the Wool marker and head there. Once you get to the
+            Wool Marker get out of the truck and head into the yellow marker and press E to begin collecting wool. Continue
+            doing that until you can't hold anymore wool, then head back to your truck and find the Dress Designer's Locker
+            Room marker on the map and head there. Once you get back to the dress designers warehouse get out of the truck
+            head to the marker make fabric to begin the process, once its completed find the retrieve clothing marker in
+            the same room and grab the clothing. After that's completed you can head to the delivery point which is a clothing
+            store marker on the map. Head there and go into the backroom to sell them clothing and then head back to your
+            truck.
+            <br /> After you've completed this you may do it again or return the truck to the red marker and get your deposit back
+            and your pay. The red marker for this job is in front of the warehouse. Also, don't forgot to change back into
+            your civilian clothes.
+            <br />
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-1-4">
+        <div class="info-title">
+          Lumber Jack
+        </div>
+        <div class="info-description">
+          <p>
+            Head to the job center, you can find it on the map. Once you get to the job center open up the job menu and select the Lumber
+            Jack job. Once the job has been selected you'll be able to find the job blips on the map, look for the Lumber
+            Jack's locker room to go on shift. Once you get to the locker room open up the menu and select the work clothes,
+            after you've done that you'll be able to spawn yourself a work truck at the vehicle spawner located within view
+            of the locker room marker. There is a $2000-dollar deposit for the truck that'll you get back minus any damages
+            to the truck, so drive safe.
+            <br /> Once you've got your work truck, open up the map and find the Woodpile marker located at the lumber mill in
+            Paleto bay and head there. Once you get to the lumber mill get out of the truck and head into the yellow marker
+            by the wood pile and press E to begin getting logs. Continue doing that until you can't hold anymore logs, and
+            the find the cut logs marker inside the mill. Once you get to the cut logs, head to the marker to begin the process,
+            once its completed head back outside and find the process boards marker at the top lumber yard at the mill. Head
+            there and collect the processed boards and then head back to your truck and find the deliver planks marker.
+            <br /> After you've completed this you may do it again or return the truck to the red marker and get your deposit back
+            and your pay. The red marker for this job is by the locker room but in the parking lot beside it. Also, don't
+            forgot to change back into your civilian clothes.
+            <br />
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-1-5">
+        <div class="info-title">
+          Reporter
+        </div>
+        <div class="info-description">
+          <p>
+            Head to the job center, you can find it on the map. Once you get to the job center open up the job menu and select the Reporter
+            job. Once the job has been selected you'll be able to find the job blips on the map, look for the San Andreas
+            Times to go on shift. Once you get to the to the building head upstairs then find the marker to head to the garage,
+            after you've done that you'll be able to spawn yourself a work truck at the vehicle spawner. There is a $200-dollar
+            deposit for the truck that'll you get back minus any damages to the truck, so drive safe.
+            <br /> To properly do this job you'll need to be a member of our community so you can post your news recordings and
+            articles for everyone to read and view. This is a good job for a streamer type player. After you've completed
+            your job for the day, return the truck to the red marker and get your deposit back and your pay. The red marker
+            for this job is by the locker room but in the parking lot beside it.
+            <br />
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-1-6">
+        <div class="info-title">
+          Butcher
+        </div>
+        <div class="info-description">
+          <p>
+            Head to the job center, you can find it on the map. Once you get to the job center open up the job menu and select the Butcher
+            job. Once the job has been selected you'll be able to find the job blips on the map, look for the Butcher's locker
+            room to go on shift. Once you get to the locker room open up the menu and select the work clothes, after you've
+            done that you'll be able to spawn yourself a work truck at the vehicle spawner located within view of the locker
+            room marker. There is a $2000-dollar deposit for the truck that'll you get back minus any damages to the truck,
+            so drive safe.
+            <br /> Once you've got your work truck, open up the map and find the Chicken Coop marker and head there. Once you get
+            to the Chicken Coop get out of the truck and head into the yellow marker inside the open garage door and press
+            E to begin collecting chickens. Continue doing that until you can't hold anymore chickens, then find the chop
+            chickens marker in the next room and head there. Once you get to chop chickens head to the marker to begin the
+            process, once its completed head into the next room and find the place chickens on tray marker. Place the chickens
+            on the tray and then head back to your truck and find the deliver chickens marker.
+            <br /> After you've completed this you may do it again or return the truck to the red marker and get your deposit back
+            and your pay. The red marker for this job is by the locker rooms. Also, don't forgot to change back into your
+            civilian clothes.
+            <br />
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-1-7">
+        <div class="info-title">
+          Fisherman
+        </div>
+        <div class="info-description">
+          <p>
+            Head to the job center, you can find it on the map. Once you get to the job center open up the job menu and select the Fisherman
+            job. Once the job has been selected you'll be able to find the job blips on the map, look for the Fisherman's
+            locker room to go on shift. Once you get to the locker room open up the menu and select the work clothes, after
+            you've done that you'll be able to spawn yourself a work truck at the vehicle spawner located within view of
+            the locker room marker. There is a $2000-dollar deposit for the truck that'll you get back minus any damages
+            to the truck, so drive safe.
+            <br /> Once you've got your work truck, open up the map and find the spawn boat marker and head there. Once you get
+            to the docks get out of the truck and head into the yellow marker and press E to spawn a boat. Then head to the
+            fishing spot in the boat, once you get there make sure you leave the boat driver seat before trying to fish or
+            you'll bug out the marker and you'll need to leave the marker and return to fish. Fish there until your full
+            of fish. Once your full head back to truck at the docks and return the boat, and then get in the truck. Head
+            to the deliver fish marker.
+            <br /> After you've completed this you may do it again or return the truck to the red marker and get your deposit back
+            and your pay. The red marker for this job is by the locker rooms. Also, don't forgot to change back into your
+            civilian clothes.
+            <br />
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-1-8">
+        <div class="info-title">
+          Park Ranger
+        </div>
+        <div class="info-description">
+          <p>
+            Head to the job center, you can find it on the map. Once you get to the job center open up the job menu and select the Park
+            Ranger Job. Once the job has been selected you'll be able to find the job blips on the map, look for the Park
+            Rangers locker room to go on shift. Once you get to the locker room open up the menu and select the work clothes,
+            after you've done that you'll be able to spawn yourself a work truck at the vehicle spawner located within view
+            of the locker room marker. There is a $200-dollar deposit for the truck that'll you get back minus any damages
+            to the truck, so drive safe.
+            <br /> Once you've got your work truck the map should update with GPS locations to make deliveries. Complete the deliveries
+            and head back to the depot. After you've completed this you may do it again or return the truck to the red marker
+            and get your deposit back and your pay. The red marker for this job is by the vehicle spawner. Also, don't forgot
+            to change back into your civilian clothes.
+            <br />
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-1-9">
+        <div class="info-title">
+          Traffic Officer
+        </div>
+        <div class="info-description">
+          <p>
+            Head to the job center, you can find it on the map. Once you get to the job center open up the job menu and select the Traffic
+            Officer. Once the job has been selected you'll be able to find the job blips on the map, look for the Blue main
+            police station to go on shift. Once you get to the locker room open up the menu and select the work clothes,
+            after you've done that you'll be able to spawn yourself a police car at the vehicle spawner located outside in
+            the parking lot.
+            <br /> Once you've got your police car the map should update with GPS locations to make deliveries. These locations
+            are locations that are being used by other jobs so your chances of encountering a player are greater. Complete
+            the deliveries, pulling over anyone not fallowing the road law and head back to the depot. After you've completed
+            this you may do it again or return the truck to the red marker and get your deposit back and your pay. The red
+            marker for this job is by the spawner in the garage. Also, don't forgot to change back into your civilian clothes.
+            <br />
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-1-10">
+        <div class="info-title">
+          Miner
+        </div>
+        <div class="info-description">
+          <p>
+            Head to the job center, you can find it on the map. Once you get to the job center open up the job menu and select the Miner
+            job. Once the job has been selected you'll be able to find the job blips on the map, look for the Miner's locker
+            room to go on shift. Once you get to the locker room open up the menu and select the work clothes, after you've
+            done that you'll be able to spawn yourself a work truck at the vehicle spawner located within view of the locker
+            room marker. There is a $2000-dollar deposit for the truck that'll you get back minus any damages to the truck,
+            so drive safe.
+            <br /> Once you've got your work truck, open up the map and find the Rocks marker located in the massive open pit mine
+            and head there. Once you get to the drill site get out of the truck and head into the yellow marker and press
+            E to begin digging for rocks. Continue doing that until you can't hold anymore rocks, then head back to your
+            truck and find the wash rocks marker on the map and head there. Once you get to wash rocks get out of the truck
+            head to the marker to begin the process, once its completed get back in you truck and find the smelter marker.
+            Head there and go inside the building to find the smelter and smelt your washed rocks and then head back to your
+            truck and find the markers for selling each ore you received (copper, iron, gold, diamonds).
+            <br /> After you've completed this you may do it again or return the truck to the red marker and get your deposit back
+            and your pay. The red marker for this job is by the locker rooms. Also, don't forgot to change back into your
+            civilian clothes
+            <br />
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-1-11">
+        <div class="info-title">
+          Mechanic
+        </div>
+        <div class="info-description">
+          <p>
+            Head to the job center, you can find it on the map. Once you get to the job center open up the job menu and select the Mechanic
+            job. Once the job has been selected you'll be able to find the job blips on the map, look for the Mechanic's
+            Shop to go on shift. Once you get to the shop open up the menu closest to the office and select the work clothes,
+            after you've done that you'll be able to spawn yourself a work truck at the vehicle spawner located within view
+            of the locker room marker.
+            <br /> This job has a work menu that can be reached by pressing f6. All the actions and functions needed are located
+            in that menu. There's another menu for crafting repair kits and such but you'll need to have the right Mechanic
+            position to access it. You need to /twt to the server that you are on duty and ready for a job.
+            <br /> Whenever you've had enough head back to the shop return your vehicles and work equipment. Also note that f7
+            is for billing customers. Be sure to change your clothes back.
+            <br />
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-1-12">
+        <div class="info-title">
+          Real Estate Agent
+        </div>
+        <div class="info-description">
+          <p>
+            Head to the job center, you can find it on the map. Once you get to the job center open up the job menu and select the Real
+            Estate Agent job. Once the job has been selected you'll be able to find the job blips on the map, look for the
+            Real Estate Agent's Office to access the real estate menu. Once you get to the to the building head upstairs
+            then find the marker in the office area. Being a real estate agent is easy just rent or sell homes to players.
+            You can show them to the clients as well. Dress well and play the part and you make some money on the buy/sell
+            market. Being a real estate agent never ends.
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-1-13">
+        <div class="info-title">
+          EMS
+        </div>
+        <div class="info-description">
+          <p>
+            Head to the job center, you can find it on the map. Once you get to the job center open up the job menu and select the Ambulance
+            job. Once the job has been selected you'll be able to find the job blips on the map, look for the Green Hospital
+            to go on shift. Once you get to the hospital head to the pink marker that enters you into the hospital and head
+            into the office closest to the door you entered in and select the work clothes, after you've done that you'll
+            be able to spawn yourself a work truck at the vehicle spawner located at the other pink marker outside marker.
+            <br /> This job has a work menu that can be reached by pressing f6. All the actions and functions needed are located
+            in that menu. There's another menu for crafting repair kits and such but you'll need to have the right position
+            to access it. You need to /twt to the server that you are on duty and ready for a job.
+            <br /> Whenever you've had enough head back to the hospital return your vehicles and work equipment. Also note that
+            f7 is for billing customers. Be sure to change your clothes back.
+          </p>
+        </div>
+      </div>
+      <div class="info" id="info-1-14">
+        <div class="info-title">
+          Police
+        </div>
+        <div class="info-description">
+          <p>
+            Head to the job center, you can find it on the map. Once you get to the job center open up the job menu and select the Police
+            job. Once the job has been selected you'll be able to find the job blips on the map, look for the Main Blue Police
+            Station to go on shift. Once you get to the police station head inside and find the locker rooms. There are little
+            plaques on the walls with arrows pointing to the police station areas. Once in the locker room head to the yellow
+            marker that allows you to select your clothing. Put on the police outfit and head over to the armory and gear
+            up. After you've done that you'll be able to spawn yourself a police vehicle at the vehicle spawner located at
+            the parking lot outside.
+            <br /> This job has a work menu that can be reached by pressing f6. All the actions and functions needed are located
+            in that menu. There's another menu for crafting repair kits and such but you'll need to have the right position
+            to access it.
+            <br /> Whenever you've had enough head back to the police return your vehicles and work equipment. Getting caught using
+            police equipment outside of the shift time is forbidden and you could be banned. Also note that f7 is for billing
+            customers. Be sure to change your clothes back.
+          </p>
+        </div>
+      </div>
+    </div>
+    </div>
+  </main>
+</body>
+
+</html>
