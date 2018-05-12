@@ -9,6 +9,7 @@ These instructions will get you a copy of the project up and running on your ser
 ### Prerequisites
 
 You should already have a functioning FiveM Server set up and running before you can install this mod.
+Basic HTML experience.
 
 ### Installing
 
