@@ -54,6 +54,9 @@ I can't promise too much for updates but i will try to fix issues as they arise.
 
 * **Please report any bugs you find to author.**
 
+## Support 
+Please file an issue here on the repo or for one on one support use the this discord link to use our live support channel: https://discord.gg/JpY6QHn
+
 ## Authors
 
 * **Amin Yabut** - *Initial work*
