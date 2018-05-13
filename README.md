@@ -20,6 +20,8 @@ A step by step series of examples that tell you have to get the tablet up and ru
     2.) Add "start tab" to your server config file.
 
     3.) Either restart your server or use the /refresh then /start tab command.
+    
+    ** Do Not Change the Folder Name from Tab. You will break the mod. **
 
 ### Usage
 
