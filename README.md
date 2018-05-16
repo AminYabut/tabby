@@ -67,7 +67,9 @@ We are working on a new version of the tablet, release date unknown at this poin
 * **Please report any bugs you find to the author.**
 
 ## Support
-Please file an issue on GitHub or check the readme on GitHub for information on how to reach the author.
+Please file an issue on GitHub or check the readme on GitHub for information on how to reach the author. You can also get more one on one support on our discord:
+
+https://discord.gg/fvxGCUa
 
 ## Authors
 
