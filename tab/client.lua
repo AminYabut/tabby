@@ -56,7 +56,7 @@ Citizen.CreateThread(
             -- Control ID 20 is the 'Z' key by default
             -- 244 = M
             -- Use https://wiki.fivem.net/wiki/Controls to find a different key
-            if (IsControlJustPressed(1, 244)) then
+            if (IsControlJustPressed(0, 244)) and GetLastInputMethod( 0 ) then
                 tabEnabled = not tabEnabled -- Toggle tablet visible state
                 REQUEST_NUI_FOCUS(tabEnabled)
                 print("The tablet state is: " .. tostring(tabEnabled))
