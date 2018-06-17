@@ -71,6 +71,8 @@ Please file an issue on GitHub or check the readme on GitHub for information on 
 
 https://discord.gg/fvxGCUa
 
+Now offering hosting for tablet friendly websites for your communities. Please contact us on discord for more information. We have Cad systems, blogs, forums, wikis and much more.
+
 ## Authors
 
 * **Amin Yabut** - *Initial work*
