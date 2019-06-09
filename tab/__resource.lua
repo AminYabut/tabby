@@ -13,7 +13,7 @@ files {
     "nui/loadscreen.jpg",
     "nui/fancy-crap.css",
     "nui/fancy-crap.js",
-    "nui/jquery.min/js",
+    "nui/jquery.min.js",
     "nui/html/news.html",
     "nui/html/laws.html",
     "nui/html/hotties.html",
