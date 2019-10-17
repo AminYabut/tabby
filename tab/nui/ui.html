@@ -256,29 +256,8 @@
                             <a class="nav-myframe" href="html/news.html">
                                 <i class="myicon material-icons">update</i>
                             </a>
-                        </li>
-                        <li data-title="Commands & Hotkeys">
-                            <a class="nav-myframe" href="html/hotties.html">
-                                <i class="myicon material-icons">keyboard</i>                                
-                            </a>
-                        </li>
-                        <li data-title="Laws">
-                            <a class="nav-myframe" href="html/laws.html">
-                                <i class="myicon material-icons">gavel</i>
-                            </a>
-                        </li>
-                        <li data-title="Rules">
-                            <a class="nav-myframe" href="html/rulesforassholes.html">
-                                <i class="myicon material-icons">info</i>
-                            </a>
-                        </li>
-                        <li data-title="Job Tutorials">
-                            <a class="nav-myframe" href="html/jobsfordummies.html">
-                                <i class="myicon material-icons">school</i>
-                            </a>
-                        </li>
-                        <li data-title="OpenCAD">
-                            <a class="nav-myframe" href="html/opencad.html">
+                        <li data-title="Cad">
+                            <a class="nav-myframe" href="html/cad.html">
                                 <i class="myicon material-icons">dashboard</i>
                             </a>
                         </li>
@@ -287,16 +266,11 @@
                                 <i class="myicon material-icons">video_library</i>
                             </a>
                         </li>
-                        <li data-title="Snake">
-                            <a class="nav-myframe" href="html/snake.html">
-                                <i class="myicon material-icons">videogame_asset</i>
+                         <li data-title="Spotify">
+                            <a class="nav-myframe" href="html/spotify.html">
+                                <i class="myicon material-icons">spotify</i>
                             </a>
                         </li>
-                        <!-- <li data-title="Spotify">
-                            <a class="nav-myframe" href="html/spotify.html">
-                                <i class="myicon material-icons">videogame_asset</i>
-                            </a>
-                        </li> -->
                     
                     </ul>
                 </footer>
@@ -304,6 +278,7 @@
         </div>
     </div>
     <script>
+        var resourcename = ""
         // When the document is ready
         $(document).ready(function () {
             var iframe = $("#iframe")[0];
@@ -324,7 +299,10 @@
             // Listens for NUI messages from Lua 
             window.addEventListener('message', function (event) {
                 var item = event.data;
-                if (item.showtab) {
+		        if ( item.resourcename ) {
+            resourceName = item.resourcename;
+        }
+              else if (item.showtab) {
                     SHOW_HIDE(true)
                 } // lua requested show
                 else if (item.hidetab) {
@@ -336,7 +314,7 @@
             document.addEventListener('keyup', function (data) {
                 if (data.which == 27) {
                     SHOW_HIDE(); // hide ui
-                    $.post("http://tab/tablet-bus", JSON.stringify({
+                    $.post('http://'+resourceName+'/tablet-bus', JSON.stringify({
                         hide: true
                     })) // tell lua to unfocus
                 }
@@ -346,7 +324,7 @@
             $('.tab-wrap .dot').click(function () {
                 if (iframe.src == 'about:blank') {
                     SHOW_HIDE(); // hide ui
-                    $.post("http://tab/tablet-bus", JSON.stringify({
+                    $.post('http://'+resourceName+'/tablet-bus', JSON.stringify({
                         hide: true
                     })) // tell lua to unfocus
                 } else {
@@ -371,7 +349,7 @@
             });
 
             // Tell lua the nui loaded
-            $.post("http://tab/tablet-bus", JSON.stringify({
+            $.post('http://'+resourceName+'/tablet-bus', JSON.stringify({
                 load: true
             }))
         });
