@@ -1,3 +1,15 @@
+--[[------------------------------------------------------------------------
+    Resource Rename Fix 
+------------------------------------------------------------------------]]--
+Citizen.CreateThread( function()
+    Citizen.Wait( 1000 )
+    local resourceName = GetCurrentResourceName()
+    SendNUIMessage( { resourcename = resourceName } )
+end )
+--[[------------------------------------------------------------------------
+    End Resource Fix
+------------------------------------------------------------------------]]--
+
 -- Define the variable used to open/close the tab
 local tabEnabled = false
 local tabLoaded = true --false
